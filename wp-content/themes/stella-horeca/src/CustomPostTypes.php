@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Base;
  */
+
 namespace BoldizArt\WpTheme;
 
 class CustomPostTypes
@@ -29,28 +31,36 @@ class CustomPostTypes
     {
         // Set UI labels for Custom Post Type
         $labels = [
-            'name' => _x('Portfolio', 'Post Type General Name', 'startertheme'),
-            'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'startertheme'),
-            'menu_name' => __('Portfolio', 'startertheme'),
-            'parent_item_colon' => __('Parent portfolio item', 'startertheme'),
-            'all_items' => __('All items', 'startertheme'),
-            'view_item' => __('View portfolio item', 'startertheme'),
-            'add_new_item' => __('Add new item', 'startertheme'),
-            'add_new' => __('Add new', 'startertheme'),
-            'edit_item' => __('Edit portfolio item', 'startertheme'),
-            'update_item' => __('Update portfolio item', 'startertheme'),
-            'search_items' => __('Search portfolio item', 'startertheme'),
-            'not_found' => __('Not hound', 'startertheme'),
-            'not_found_in_trash'  => __('Not found in trash', 'startertheme'),
+            'name' => _x('Portfolio', 'Post Type General Name', 'stellahoreca'),
+            'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'stellahoreca'),
+            'menu_name' => __('Portfolio', 'stellahoreca'),
+            'parent_item_colon' => __('Parent portfolio item', 'stellahoreca'),
+            'all_items' => __('All items', 'stellahoreca'),
+            'view_item' => __('View portfolio item', 'stellahoreca'),
+            'add_new_item' => __('Add new item', 'stellahoreca'),
+            'add_new' => __('Add new', 'stellahoreca'),
+            'edit_item' => __('Edit portfolio item', 'stellahoreca'),
+            'update_item' => __('Update portfolio item', 'stellahoreca'),
+            'search_items' => __('Search portfolio item', 'stellahoreca'),
+            'not_found' => __('Not hound', 'stellahoreca'),
+            'not_found_in_trash'  => __('Not found in trash', 'stellahoreca'),
         ];
-            
+
         // Set other options for Custom Post Type 
         $args = [
-            'label' => __('Portfolio', 'startertheme'),
-            'description' => __('Website portfolio', 'startertheme'),
+            'label' => __('Portfolio', 'stellahoreca'),
+            'description' => __('Website portfolio', 'stellahoreca'),
             'labels' => $labels,
             'supports' => [
-                'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'taxonomies'
+                'title',
+                'editor',
+                'excerpt',
+                'author',
+                'thumbnail',
+                'comments',
+                'revisions',
+                'custom-fields',
+                'taxonomies'
             ],
             'hierarchical' => false,
             'public' => true,
@@ -65,16 +75,15 @@ class CustomPostTypes
             'publicly_queryable' => true,
             'capability_type' => 'post',
             'show_in_rest' => true,
-                
+
             // This is where we add taxonomies to our CPT
             'taxonomies' => [
                 'projects'
             ]
         ];
-            
+
         // Registering your Custom Post Type
         register_post_type('portfolio', $args);
-        
     }
 
     /**
@@ -86,15 +95,15 @@ class CustomPostTypes
         $labels = [
             'name' => _x('Projects', 'taxonomy general name'),
             'singular_name' => _x('Project', 'taxonomy singular name'),
-            'search_items' => __('Search projects', 'startertheme'),
-            'all_items' => __('All projects', 'startertheme'),
-            'parent_item' => __('Parent project', 'startertheme'),
-            'parent_item_colon' => __('Parent project:', 'startertheme'),
-            'edit_item' => __('Edit project', 'startertheme'), 
-            'update_item' => __('Update project', 'startertheme'),
-            'add_new_item' => __('Add new project', 'startertheme'),
-            'new_item_name' => __('New project', 'startertheme'),
-            'menu_name' => __('Projects', 'startertheme'),
+            'search_items' => __('Search projects', 'stellahoreca'),
+            'all_items' => __('All projects', 'stellahoreca'),
+            'parent_item' => __('Parent project', 'stellahoreca'),
+            'parent_item_colon' => __('Parent project:', 'stellahoreca'),
+            'edit_item' => __('Edit project', 'stellahoreca'),
+            'update_item' => __('Update project', 'stellahoreca'),
+            'add_new_item' => __('Add new project', 'stellahoreca'),
+            'new_item_name' => __('New project', 'stellahoreca'),
+            'menu_name' => __('Projects', 'stellahoreca'),
         ];
 
         // Set args

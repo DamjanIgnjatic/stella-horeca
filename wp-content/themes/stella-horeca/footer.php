@@ -13,15 +13,15 @@
 												<?php $no++; ?>
 												<div class="<?php echo $column['column']; ?> section-<?php echo $no; ?>">
 													<?php
-														register_sidebar([
-															'name' => 'Footer section '.$no,
-															'description' => 'Footer section '.$no,
-															'id' => "footer-section-{$no}",
-															'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
-															'after_widget' => '</div>',
-															'before_title' => '<h3 class="widget-title">',
-															'after_title' => '</h3>',
-														]);
+													register_sidebar([
+														'name' => 'Footer section ' . $no,
+														'description' => 'Footer section ' . $no,
+														'id' => "footer-section-{$no}",
+														'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
+														'after_widget' => '</div>',
+														'before_title' => '<h3 class="widget-title">',
+														'after_title' => '</h3>',
+													]);
 													?>
 													<?php dynamic_sidebar("footer-section-{$no}"); ?>
 												</div>
@@ -37,18 +37,18 @@
 									<small>
 										<?php echo str_replace(['[y]', '[Y]'], date('Y'), $copyright); ?>
 										<?php if (!str_contains($copyright, 'BoldizArt')): ?>
-											<a href="https://boldizart.com/"><?php _e('Web development', 'startertheme'); ?> BoldizArt</a>
+											<a href="https://boldizart.com/"><?php _e('Web development', 'stellahoreca'); ?> BoldizArt</a>
 										<?php endif; ?>
 									</small>
 								<?php else: ?>
-									<small>&copy; <?php _e('Copyright', 'startertheme'); ?> <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> | 
-									<?php _e('All rights reserved', 'startertheme'); ?>.</small>
+									<small>&copy; <?php _e('Copyright', 'stellahoreca'); ?> <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> |
+										<?php _e('All rights reserved', 'stellahoreca'); ?>.</small>
 								<?php endif; ?>
 							</div>
 						<?php endif; ?>
 					<?php endif; ?>
 				<?php endif; ?>
-			<?php endif;?>
+			<?php endif; ?>
 		</footer>
 		<!-- / Footer end -->
 
@@ -62,5 +62,6 @@
 		<?php wp_footer(); ?>
 
 		<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
-	</body>
-</html>
+		</body>
+
+		</html>

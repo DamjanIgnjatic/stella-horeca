@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Defaults;
  */
+
 namespace BoldizArt\WpTheme;
 
 class Defaults
@@ -25,7 +27,7 @@ class Defaults
 
             // Set content width
             \add_action('after_setup_theme', [$this, 'setContentWidth'], 0);
-        
+
             // Redirect non-admin users to the home page
             \add_action('admin_init', [$this, 'redirectNonAdminUser']);
 
@@ -59,7 +61,7 @@ class Defaults
     /**
      * WprdPress init function
      */
-    public Function init()
+    public function init()
     {
         /**
          * Create test page on theme activation
@@ -76,7 +78,7 @@ class Defaults
 
             if (!$query->have_posts()) {
                 // Add page template, for example template-custom.php. Leave blank if you don't want a custom page template
-                $template = ''; 
+                $template = '';
 
                 // Load template content
                 ob_start();
@@ -95,9 +97,9 @@ class Defaults
 
                 // Create a page
                 $pid = wp_insert_post($data);
-            
+
                 // Set a custom template
-                if ($pid && !empty($template)){
+                if ($pid && !empty($template)) {
                     update_post_meta($pid, '_wp_page_template', $template);
                 }
             }
@@ -123,7 +125,7 @@ class Defaults
         if (function_exists('add_action')) {
 
             // Make theme available for translation.
-            load_theme_textdomain('startertheme', get_template_directory() . '/languages');
+            load_theme_textdomain('stellahoreca', get_template_directory() . '/languages');
 
             // Add default posts and comments RSS feed links to head.
             add_theme_support('automatic-feed-links');
@@ -136,7 +138,7 @@ class Defaults
 
             // This theme uses wp_nav_menu() in one location.
             register_nav_menus([
-                'header-menu' => esc_html__('Primary', 'startertheme'),
+                'header-menu' => esc_html__('Primary', 'stellahoreca'),
             ]);
 
             // Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -210,7 +212,7 @@ class Defaults
     function themeDependencies()
     {
         if (!function_exists('get_field')) {
-            echo '<div class="error"><p>' . __('Warning: The theme needs the Custom Fields pro plugin to function', 'startertheme') . '</p></div>';
+            echo '<div class="error"><p>' . __('Warning: The theme needs the Custom Fields pro plugin to function', 'stellahoreca') . '</p></div>';
         }
     }
 
@@ -233,14 +235,15 @@ class Defaults
         $content = apply_filters('wptexturize', $content);
         $content = apply_filters('convert_chars', $content);
         $content = wp_trim_words($content, $length, $more);
-        
+
         echo $content;
     }
 
     /**
      * Hide the update message for specific plugin
      */
-    public function preventAutoUpdate($value) {
+    public function preventAutoUpdate($value)
+    {
         if (is_object($value) && isset($value->response) && is_array($value->response)) {
 
             // List of plugins to disable updateing
@@ -260,7 +263,7 @@ class Defaults
                 }
             }
         }
-    
+
         return $value;
     }
 }

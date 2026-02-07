@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Navigation;
  */
+
 namespace BoldizArt\WpTheme;
 
 class Navigation
@@ -52,7 +54,7 @@ class Navigation
     }
 
     /**
-     * StarterTheme navigation
+     * StellaHoreca navigation
      */
     public function themeNavigation()
     {
@@ -89,15 +91,15 @@ class Navigation
         if ($itemId && (isset($_POST['menu-item-disable-on-mobile']) || isset($_POST['menu-item-disable-on-desktop']))) {
             $mobile = isset($_POST['menu-item-disable-on-mobile'], $_POST['menu-item-disable-on-mobile'][$itemId]) ? true : false;
             $desktop = isset($_POST['menu-item-disable-on-desktop'], $_POST['menu-item-disable-on-desktop'][$itemId]) ? true : false;
-    
+
             // Update the item meta
             update_post_meta($itemId, 'menu-item-disable-on-mobile', $mobile);
             update_post_meta($itemId, 'menu-item-disable-on-desktop', $desktop);
         }
-    
+
         return $menuId;
     }
-    
+
     /**
      * Additional navigation classes
      * @param array $classes
@@ -108,14 +110,14 @@ class Navigation
         // Check meta data by item id
         $mobile = get_post_meta($item->ID, 'menu-item-disable-on-mobile', true);
         $classes[] = $mobile ? 'd-none' : 'd-block';
-    
+
         // Add desktop classes
         $desktop = get_post_meta($item->ID, 'menu-item-disable-on-desktop', true);
         $classes[] = $desktop ? 'd-lg-none' : 'd-lg-block';
-    
+
         return $classes;
     }
-    
+
     /**
      * Add checkboxes to each menu item
      * @param WP_Object $item
@@ -124,7 +126,7 @@ class Navigation
     {
         $mobile = get_post_meta($itemId, 'menu-item-disable-on-mobile', true);
         $desktop = get_post_meta($itemId, 'menu-item-disable-on-desktop', true);
-        ?>
+?>
         <hr />
         <p class="description">
             <label for="menu-item-disable-on-mobile-<?php echo $itemId; ?>">
@@ -139,6 +141,6 @@ class Navigation
             </label>
         </p>
         <hr />
-        <?php 
+<?php
     }
 }

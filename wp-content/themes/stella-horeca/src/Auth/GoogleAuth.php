@@ -1,8 +1,10 @@
 <?php
+
 /**
  * @file
  * use BoldizArt\WpTheme\Auth\GoogleAuth;
  */
+
 namespace BoldizArt\WpTheme\Auth;
 
 /*
@@ -12,6 +14,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
 use Google_Client;
 use Google_Service_Oauth2;
 use BoldizArt\WpTheme\URL;
@@ -61,7 +64,7 @@ class GoogleAuth extends Auth
         // Add shortcodes
         add_shortcode('google_login', [$this, 'LoginButton']);
     }
-    
+
     // Detect login request
     public function detectRegistrationRequest()
     {
@@ -70,7 +73,7 @@ class GoogleAuth extends Auth
             $token = $this->client->fetchAccessTokenWithAuthCode($_GET['code']);
             if (array_key_exists('access_token', $token)) {
                 $this->client->setAccessToken($token['access_token']);
-                
+
                 // get profile info
                 $google_oauth = new Google_Service_Oauth2($this->client);
                 $google_account_info = $google_oauth->userinfo->get();
@@ -91,7 +94,7 @@ class GoogleAuth extends Auth
                         $firstname = array_shift($namearr);
                         $lastname = is_array($namearr) && count($namearr) ? implode(' ', $namearr) : '';
                         wp_update_user([
-                            'ID' => $uid, 
+                            'ID' => $uid,
                             'display_name' => $fullname,
                             'first_name' => $firstname,
                             'last_name' => $lastname
@@ -119,25 +122,25 @@ class GoogleAuth extends Auth
         $user = \wp_get_current_user();
 
         // Set label 
-        $label = __('Continue with Google', 'startertheme');
+        $label = __('Continue with Google', 'stellahoreca');
 
         // Get type
         if ($attr && is_array($attr) && array_key_exists('type', $attr) && $type = $attr['type']) {
             switch ($type) {
                 case 'login':
-                    $label = __('Login with Google', 'startertheme');
+                    $label = __('Login with Google', 'stellahoreca');
                     break;
 
                 case 'register':
-                    $label = __('Register with Google', 'startertheme');
+                    $label = __('Register with Google', 'stellahoreca');
                     break;
             }
         }
 
         if ((!$user || !$user->ID) && !isset($_GET['code'])) {
             return '
-                <a href="'.$this->client->createAuthUrl().'" class="btn btn-google my-2 my-lg-0">
-                    <img src="'.\get_template_directory_uri() . '/img/google.png" class="google-logo"> ' . $label . '</a>
+                <a href="' . $this->client->createAuthUrl() . '" class="btn btn-google my-2 my-lg-0">
+                    <img src="' . \get_template_directory_uri() . '/img/google.png" class="google-logo"> ' . $label . '</a>
             ';
         }
     }

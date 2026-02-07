@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\WoocommerceHelper;
  */
+
 namespace BoldizArt\WpTheme;
 
 use BoldizArt\WpTheme\URL;
@@ -84,7 +86,7 @@ class WoocommerceHelper
         // // Add a new menu links
         // // Reservations
         // $menu_links = array_slice($menu_links, 0, 1, true) 
-        //     + ['reservations' => __('Reservations', 'startertheme')]
+        //     + ['reservations' => __('Reservations', 'stellahoreca')]
         //     + array_slice($menu_links, 1, NULL, true);
         return $menu_links;
     }
@@ -116,8 +118,9 @@ class WoocommerceHelper
      * Hide the page title on specific pages
      * @param string $title
      * @return string|bool $title
-    */
-    function hideWoocommercePageTitles($title) {
+     */
+    function hideWoocommercePageTitles($title)
+    {
         if (\is_shop() || \is_product_category()) {
             $title = false;
         }
@@ -129,7 +132,7 @@ class WoocommerceHelper
      * Check if the current page a woocommerce one or not
      * @return bool
      */
-    public static function isWooPage() : bool
+    public static function isWooPage(): bool
     {
         // Check if WooCommerce is active and the required class exists
         if (class_exists('WooCommerce')) {
@@ -168,7 +171,7 @@ class WoocommerceHelper
                 $order_by = 'ORDER BY p.post_date DESC';
                 break;
         }
-    
+
         $query = $wpdb->prepare(
             "SELECT p.ID
             FROM {$wpdb->prefix}posts p
@@ -180,7 +183,7 @@ class WoocommerceHelper
             LIMIT %d",
             $limit
         );
-    
+
         $product_ids = $wpdb->get_col($query);
         $product_ids = array_merge($excluded, $product_ids);
 
@@ -188,7 +191,7 @@ class WoocommerceHelper
         foreach ($product_ids as $product_id) {
             $products[] = wc_get_product($product_id);
         }
-    
+
         return $products;
     }
 
@@ -197,75 +200,76 @@ class WoocommerceHelper
      * @param array $fields
      * @return array $fields
      */
-    function addBootstrapClassesToCheckoutFields($fields) {
+    function addBootstrapClassesToCheckoutFields($fields)
+    {
         foreach ($fields as &$fieldset) {
             foreach ($fieldset as &$field) {
-                $field['class'][] = 'form-group'; 
+                $field['class'][] = 'form-group';
                 $field['input_class'][] = 'form-control';
             }
         }
 
         return $fields;
     }
-    
+
     /**
      * Aff arguments to the WooCommerce form fields
      * @param array $args
      * @return array $args
      */
-    function addFieldsArguments($args) : array
+    function addFieldsArguments($args): array
     {
         // Start field type switch case
         switch ($args['type']) {
-    
+
             case 'select':
                 $args['class'][] = 'form-group';
                 $args['input_class'] = ['form-control', 'form-select'];
                 $args['label_class'] = ['control-label'];
                 $args['custom_attributes'] = ['data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true'];
-            break;
-    
+                break;
+
             case 'country':
                 $args['class'][] = 'form-group single-country';
                 $args['input_class'] = ['form-control', 'form-select'];
                 $args['label_class'] = ['control-label'];
-            break;
-    
+                break;
+
             case "state":
                 $args['class'][] = 'form-group';
                 $args['input_class'] = ['form-control', 'input-lg'];
                 $args['label_class'] = ['control-label'];
                 $args['custom_attributes'] = ['data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true'];
-            break;
-    
-            case "password" :
-            case "text" :
-            case "email" :
-            case "tel" :
-            case "number" :
+                break;
+
+            case "password":
+            case "text":
+            case "email":
+            case "tel":
+            case "number":
                 $args['class'][] = 'form-group';
                 $args['input_class'] = ['form-control', 'input-lg'];
                 $args['label_class'] = ['control-label'];
-            break;
-    
-            case 'textarea' :
+                break;
+
+            case 'textarea':
                 $args['input_class'] = ['form-control', 'input-lg'];
                 $args['label_class'] = ['control-label'];
-            break;
-    
-            case 'checkbox' :  
-            break;
-    
-            case 'radio' :
-            break;
-    
-            default :
+                break;
+
+            case 'checkbox':
+                break;
+
+            case 'radio':
+                break;
+
+            default:
                 $args['class'][] = 'form-group';
                 $args['input_class'] = ['form-control', 'input-lg'];
                 $args['label_class'] = ['control-label'];
-            break;
+                break;
         }
-    
+
         return $args;
     }
 
@@ -274,8 +278,8 @@ class WoocommerceHelper
      */
     function changeSymbol($symbol, $currency)
     {
-        switch(strtolower($currency)) {
-            case 'rsd': 
+        switch (strtolower($currency)) {
+            case 'rsd':
                 $symbol = 'RSD';
                 break;
         }

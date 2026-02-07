@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Pagination;
  */
+
 namespace BoldizArt\WpTheme;
 
 class Pagination
@@ -43,21 +45,21 @@ class Pagination
      */
     function singlePagination()
     {
-        ?>
+?>
         <div class="single-pagination row d-flex justify-content-between py-5">
             <div class="link prev col-6">
                 <?php if (get_previous_post_link()): ?>
-                <div class="h4 d-block"><?php _e('Previous', 'startertheme'); ?></div>
-                <?php previous_post_link('%link'); ?>
+                    <div class="h4 d-block"><?php _e('Previous', 'stellahoreca'); ?></div>
+                    <?php previous_post_link('%link'); ?>
                 <?php endif; ?>
             </div>
             <div class="link next col-6">
                 <?php if (get_next_post_link()): ?>
-                <div class="h4 d-block"><?php _e('Next', 'startertheme'); ?></div>
-                <?php next_post_link('%link'); ?>
+                    <div class="h4 d-block"><?php _e('Next', 'stellahoreca'); ?></div>
+                    <?php next_post_link('%link'); ?>
                 <?php endif; ?>
             </div>
         </div>
-        <?php
+<?php
     }
 }

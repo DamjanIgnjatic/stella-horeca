@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\ReadingTime;
  */
+
 namespace BoldizArt\WpTheme;
 
 class ReadingTime
@@ -13,7 +15,7 @@ class ReadingTime
     {
         // Add actions
         if (function_exists('add_action')) {
-            
+
             // Init function
             \add_action('reading_time', [$this, 'readingTime'], 10, 1);
         }
@@ -35,11 +37,11 @@ class ReadingTime
     {
         $text = wp_strip_all_tags($text);
         $readTime = $this->calculateReadingTime($text);
-        $timeText = ($readTime > 1) ? __('minutes reading', 'startertheme') : __('minute reading', 'startertheme');
-        ?>
+        $timeText = ($readTime > 1) ? __('minutes reading', 'stellahoreca') : __('minute reading', 'stellahoreca');
+?>
         <span class="reading-time">
             <span class="time"><strong><?php echo $readTime; ?></strong> <?php echo $timeText ?></span>
         </span>
-        <?php
+<?php
     }
 }

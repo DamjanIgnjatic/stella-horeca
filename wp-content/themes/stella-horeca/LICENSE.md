@@ -1,4 +1,4 @@
-# [StarterTheme](http://startertheme.com) License
+# [StellaHoreca](http://stellahoreca.com) License
 
 ## License
 

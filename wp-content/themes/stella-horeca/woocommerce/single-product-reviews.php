@@ -87,13 +87,13 @@ if (!comments_open()) {
         $name_email_required = (bool) get_option('require_name_email', 1);
         $fields              = array(
           'author' => array(
-            'label'    => __('Name*', 'startertheme'),
+            'label'    => __('Name*', 'stellahoreca'),
             'type'     => 'text',
             'value'    => $commenter['comment_author'],
             'required' => $name_email_required,
           ),
           'email'  => array(
-            'label'    => __('Email* (will not be published)', 'startertheme'),
+            'label'    => __('Email* (will not be published)', 'stellahoreca'),
             'type'     => 'email',
             'value'    => $commenter['comment_author_email'],
             'required' => $name_email_required,
@@ -132,7 +132,7 @@ if (!comments_open()) {
 					</select></div>';
         }
 
-        $comment_form['comment_field'] .= '<p class="comment-form-comment"><textarea id="comment" class="form-control" placeholder="' . __('Your review...*', 'startertheme') . '" name="comment" cols="45" rows="8" required></textarea></p>';
+        $comment_form['comment_field'] .= '<p class="comment-form-comment"><textarea id="comment" class="form-control" placeholder="' . __('Your review...*', 'stellahoreca') . '" name="comment" cols="45" rows="8" required></textarea></p>';
 
         comment_form(apply_filters('woocommerce_product_review_comment_form_args', $comment_form));
         ?>

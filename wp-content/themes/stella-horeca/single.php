@@ -1,20 +1,20 @@
 <?php
-	// Hide the sidebar
-	set_query_var('brand', false);
-	get_header(); 
+// Hide the sidebar
+set_query_var('brand', false);
+get_header();
 ?>
 
 <main role="main">
-		<!-- Main Content Section -->
-		<section class="section block single-post-section">
-			<div class="container py-2">
-				<div class="row">
-					<div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 content">
+	<!-- Main Content Section -->
+	<section class="section block single-post-section">
+		<div class="container py-2">
+			<div class="row">
+				<div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 content">
 
-						<!-- /section -->
-						<section class="article-section single-post posts">
+					<!-- /section -->
+					<section class="article-section single-post posts">
 
-							<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 								<!-- article -->
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -24,15 +24,16 @@
 									<!-- /post title -->
 
 									<!-- post thumbnail -->
-									<?php if (has_post_thumbnail()) : // Check if Thumbnail exists ?>
+									<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
+									?>
 										<div class="post-image text-center img-bg">
-										<?php 
+											<?php
 											if ($articleImageId = get_post_thumbnail_id()) {
-												echo '<link rel=preload href="'.wp_get_attachment_image_url($articleImageId, 'services').'" as="image">';
+												echo '<link rel=preload href="' . wp_get_attachment_image_url($articleImageId, 'services') . '" as="image">';
 												echo wp_get_attachment_image($articleImageId, 'services', false, ['class' => 'mt-0 single-post-image skip-lazy img-rounded']);
 											}
-										?>
-										<div class="img-wrapper"></div>
+											?>
+											<div class="img-wrapper"></div>
 										</div>
 									<?php endif; ?>
 									<!-- /post thumbnail -->
@@ -48,10 +49,10 @@
 									<!-- /post details -->
 
 									<!-- Dynamic Content -->
-									<?php 
-										the_content();
-										// $content = get_the_content();
-										// echo apply_filters('block_content' , $content); 
+									<?php
+									the_content();
+									// $content = get_the_content();
+									// echo apply_filters('block_content' , $content); 
 									?>
 									<!-- /Dynamic Content -->
 
@@ -65,12 +66,13 @@
 
 									<!-- Tagss -->
 									<div class="tags">
-										<?php the_tags('<span class="h2">' . __( 'Tags: ', 'startertheme' ) . '</span>', ', '); // Separated by commas with a line break at the end ?>
+										<?php the_tags('<span class="h2">' . __('Tags: ', 'stellahoreca') . '</span>', ', '); // Separated by commas with a line break at the end 
+										?>
 									</div>
 									<!-- /Tagss -->
 
 									<!-- Related posts block -->
-									<?php do_shortcode('[related_posts id="' . get_the_ID() . '"]'); ?> 
+									<?php do_shortcode('[related_posts id="' . get_the_ID() . '"]'); ?>
 									<!-- /Related posts block -->
 
 									<?php edit_post_link(); ?>
@@ -81,25 +83,25 @@
 
 							<?php endwhile; ?>
 
-							<?php else: ?>
+						<?php else: ?>
 
-								<!-- article -->
-								<article>
+							<!-- article -->
+							<article>
 
-									<h1><?php _e('Sorry, nothing to display.', 'startertheme'); ?></h1>
+								<h1><?php _e('Sorry, nothing to display.', 'stellahoreca'); ?></h1>
 
-								</article>
-								<!-- /article -->
+							</article>
+							<!-- /article -->
 
-							<?php endif; ?>
+						<?php endif; ?>
 
-						</section>
-						<!-- /section -->
-					</div>
+					</section>
+					<!-- /section -->
 				</div>
 			</div>
-		</section>
-		<!-- /Main Content Section -->
-	</main>
+		</div>
+	</section>
+	<!-- /Main Content Section -->
+</main>
 
 <?php get_footer(); ?>

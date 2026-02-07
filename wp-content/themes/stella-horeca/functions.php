@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @author Boldizar Santo <boldizar@startertheme.com>
- * @package startertheme
- * @link https://startertheme.com/
+ * @author Boldizar Santo <boldizar@stellahoreca.com>
+ * @package stellahoreca
+ * @link https://stellahoreca.com/
  */
 require_once __DIR__ . '/vendor/autoload.php';
 

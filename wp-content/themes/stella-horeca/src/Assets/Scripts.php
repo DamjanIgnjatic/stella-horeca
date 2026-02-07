@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Assets\Scripts;
  */
+
 namespace BoldizArt\WpTheme\Assets;
 
 use BoldizArt\WpTheme\WoocommerceHelper;
@@ -35,12 +37,12 @@ class Scripts
     {
         if (function_exists('wp_register_script') && function_exists('wp_enqueue_script') && function_exists('get_template_directory_uri')) {
             // Default scripts
-            \wp_register_script('startertheme-theme', \get_template_directory_uri() . '/dist/js/theme.js', [], ASSETS_VERSION);
-            \wp_enqueue_script('startertheme-theme');
+            \wp_register_script('stellahoreca-theme', \get_template_directory_uri() . '/dist/js/theme.js', [], ASSETS_VERSION);
+            \wp_enqueue_script('stellahoreca-theme');
 
             // Theme switcher
-            \wp_register_script('startertheme-theme-switcher', \get_template_directory_uri() . '/dist/js/theme-switcher.js', [], ASSETS_VERSION);
-            \wp_enqueue_script('startertheme-theme-switcher');
+            \wp_register_script('stellahoreca-theme-switcher', \get_template_directory_uri() . '/dist/js/theme-switcher.js', [], ASSETS_VERSION);
+            \wp_enqueue_script('stellahoreca-theme-switcher');
 
             // Fontawesome script
             \wp_register_script('fa-fontawesome-script', 'https://use.fontawesome.com/releases/v5.15.4/js/all.js', [], '5.15.4');
@@ -89,8 +91,8 @@ class Scripts
     function removejQuery()
     {
         if (
-            !is_customize_preview() && 
-            !is_admin() && 
+            !is_customize_preview() &&
+            !is_admin() &&
             $GLOBALS['pagenow'] != 'wp-login.php' &&
             !WoocommerceHelper::isWooPage() &&
             !is_page_template(['template-price-calculator.php', 'archive-product.php'])
@@ -104,11 +106,12 @@ class Scripts
      * Prevent jQuery scripts
      * @param Object $scripts
      */
-    function dequeuejQueryMigrate($scripts) {
+    function dequeuejQueryMigrate($scripts)
+    {
         if (
-            !is_admin() && 
-            !is_customize_preview() && 
-            !empty($scripts->registered['jquery']) && 
+            !is_admin() &&
+            !is_customize_preview() &&
+            !empty($scripts->registered['jquery']) &&
             !WoocommerceHelper::isWooPage()
         ) {
             $scripts->registered['jquery']->deps = array_diff(

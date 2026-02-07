@@ -2,19 +2,31 @@
 $static-white: #fff;
 $static-black: #222;
 $static-light-title: #333;
-$static-light-text: #36334A;
+$static-light-text: #36334a;
 $static-dark-text: #e2e2e2ff;
 $static-dark-title: #fefefe;
 
 // Theme colors
-$primary: #447821;
+$primary: #a800ba;
 $primary-hover: #375c1e;
-$secondary: #FFCC00;
+$secondary: #ffcc00;
 $secondary-hover: #ffbf0e;
-$gold: #F4AD17;
+$gold: #f4ad17;
 $success: #3acc6c;
 $danger: #dd5555;
 $info: #3994df;
+
+// White pallet
+$white-100: rgba(255, 255, 255, 0.09);
+
+// Purple
+$purple-100: #ce00e3;
+$purple-200: #bb00cf;
+$purple-300: #ce00e4;
+$purple-400: #9200a2;
+
+// Dark
+$dark-100: #1f1f1f;
 
 // Grayscales
 $white: #fff;
@@ -33,7 +45,7 @@ $black: #000;
 $light: #f9f9f9;
 $background: #fefefe;
 $title: #333;
-$text: #36334A;
+$text: #36334a;
 $border: #e9ecef;
 $gray: #343a40;
 

@@ -1,69 +1,53 @@
-// Defaults 
-html, 
-body.startertheme {
-   min-height: 100vh;
-   background: $background;
-   color: $text;
-   font-family: $text-font;
-   font-size: $font-size;
-   font-weight: $font-weight-base;
-   line-height: $line-height-base;
+// Defaults
 
-   &.freez {
-      overflow: hidden;
-   }
-
-   &.admin-bar {
-      .navigation-section {
-         top: 32px;
-      }
-   }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-hr {
-   border-color: $gray-500;
+html {
+  font-size: 62.5%;
 }
 
-a {
-   transition: color ease-in-out 240ms;
-   color: $primary;
+body.stellahoreca {
+  min-height: 100vh;
+  background: $background;
+  color: $white;
+  font-family: $text-font;
+  font-size: $font-size;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
 
-   &:hover {
-      color: $primary-hover;
-   }
-}
+  &.freez {
+    overflow: hidden;
+  }
 
-b,
-strong {
-   font-weight: $font-weight-bold;
-}
-
-// Container padding on mobile devices
-@media only screen and (min-width: $xs) {
-   .container {
-      padding-right: 22px;
-      padding-left: 22px;
-   }
-}
-
-.z-index {
-   z-index: 5;
+  &.admin-bar {
+    .navigation-section {
+      top: 32px;
+    }
+  }
 }
 
 ::-webkit-scrollbar {
-   width: 10px;
-   border-radius: 0;
+  width: 10px;
+  border-radius: 0;
 }
-                   
+
 ::-webkit-scrollbar-track {
-   background: $background; 
+  background: $background;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: $border;
-   border-radius: 5px;
+  background: $border;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background: $secondary;
+  background: $secondary;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,16 +1,16 @@
 /*
-Theme: StarterTheme
+Theme: StellaHoreca
 Author Boldizar Santo (boldizar.santo@gmail.com)
-Website: startertheme.com
+Website: stellahoreca.com
 */
 
 // Variables
-@import 'theme/variables/index';
+@import "theme/variables/index";
 
 // Import Bootsrap style
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Import custom style
-@import 'theme/base/index';
-@import 'theme/sections/index';
-@import 'theme/components/index';
+@import "theme/base/index";
+@import "theme/sections/index";
+@import "theme/components/index";

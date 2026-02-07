@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\PageViews;
  */
+
 namespace BoldizArt\WpTheme;
 
 class PageViews
@@ -38,7 +40,7 @@ class PageViews
             $countKey = 'pageviews_count';
             $count = (int) get_post_meta($pid, $countKey, true);
 
-            echo sprintf(__('Visited: %s', 'startertheme'), $count);
+            echo sprintf(__('Visited: %s', 'stellahoreca'), $count);
         }
     }
 

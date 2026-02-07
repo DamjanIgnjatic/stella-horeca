@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Assets\DynamicFonts;
  */
+
 namespace BoldizArt\WpTheme\Assets;
 
 class DynamicFonts
@@ -119,7 +121,7 @@ class DynamicFonts
                                 }
                             }
                         }
-                               
+
                         print_r($font);
 
                         // Include font-families
@@ -152,6 +154,6 @@ class DynamicFonts
         }
 
         // Add the CSS code to the main style
-        wp_add_inline_style('startertheme-theme-style', $css);
+        wp_add_inline_style('stellahoreca-theme-style', $css);
     }
 }

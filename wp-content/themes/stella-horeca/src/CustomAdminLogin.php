@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\CustomAdminLogin;
  */
+
 namespace BoldizArt\WpTheme;
 
 class CustomAdminLogin
@@ -17,13 +19,13 @@ class CustomAdminLogin
         // Set fields
         $this->fields = [
             'login' => [
-                'title' => __('Custom admin login URL', 'startertheme'),
-                'description' => __('Set a custom admin login URL to protect your login page', 'startertheme'),
+                'title' => __('Custom admin login URL', 'stellahoreca'),
+                'description' => __('Set a custom admin login URL to protect your login page', 'stellahoreca'),
                 'slug' => 'aeva'
             ],
             'redirect' => [
-                'title' => __('Custom admin redirect URL', 'startertheme'),
-                'description' => __('Set a custom admin 404 redirect URL if someone tryes to access wp-admin', 'startertheme'),
+                'title' => __('Custom admin redirect URL', 'stellahoreca'),
+                'description' => __('Set a custom admin 404 redirect URL if someone tryes to access wp-admin', 'stellahoreca'),
                 'slug' => '404'
             ]
         ];
@@ -42,7 +44,7 @@ class CustomAdminLogin
 
     /**
      * Add field to permalinks page
-    */
+     */
     function adminLoginUrlSettings()
     {
         \add_settings_section(
@@ -51,18 +53,18 @@ class CustomAdminLogin
             [$this, 'customAdminAuthSection'],
             'permalink'
         );
-    
+
         \register_setting('permalink', 'custom_admin_auth_login');
     }
-    
+
     /**
      * Custom admin login section
      */
     public function customAdminAuthSection()
     {
-        echo '<p>' . __('Set a custom admin login and 404 redirect URL to protect your login page.', 'startertheme') . '</p>';
+        echo '<p>' . __('Set a custom admin login and 404 redirect URL to protect your login page.', 'stellahoreca') . '</p>';
     }
-    
+
     /** 
      * Add custom fields to the Settings > Permalinks page
      */
@@ -70,21 +72,21 @@ class CustomAdminLogin
     {
         foreach ($this->fields as $id => $data) {
             extract($data);
-    
+
             $key = "custom_admin_{$id}_slug";
-            $field = function() use ($key, $slug, $description) {
-                ?>
-                    <input name="<?php echo $key; ?>" type="text" class="regular-text code" value="<?php echo esc_attr(get_option($key)); ?>" placeholder="<?php echo $slug; ?>" /><br />
-                    <?php if (isset($description)): ?>
-                        <small><?php echo $description; ?></small>
-                    <?php endif; ?>
-                <?php
+            $field = function () use ($key, $slug, $description) {
+?>
+                <input name="<?php echo $key; ?>" type="text" class="regular-text code" value="<?php echo esc_attr(get_option($key)); ?>" placeholder="<?php echo $slug; ?>" /><br />
+                <?php if (isset($description)): ?>
+                    <small><?php echo $description; ?></small>
+                <?php endif; ?>
+<?php
             };
-    
+
             add_settings_field($key, $title, $field, 'permalink', 'custom_admin_login_section');
         }
     }
-    
+
     /**
      * Redirect to the actual login page
      */
@@ -97,7 +99,7 @@ class CustomAdminLogin
             exit();
         }
     }
-    
+
     /**
      * Redirect to the custom 404 page
      */
@@ -105,14 +107,14 @@ class CustomAdminLogin
     {
         $login = get_option('custom_admin_login_slug');
         if ($login && strpos($_SERVER['REQUEST_URI'], $login) === false) {
-    
+
             // Get custom redirect URL
             $redirect = get_option('custom_admin_redirect_slug', '404');
             wp_safe_redirect(home_url($redirect), 302);
             exit;
         }
     }
-    
+
     /**
      * Update custom slug fields
      */
@@ -121,13 +123,13 @@ class CustomAdminLogin
         foreach (array_keys($this->fields) as $id) {
             $key = "custom_admin_{$id}_slug";
             if (isset($_POST[$key])) {
-    
+
                 // Clean the slug 
                 $slug = trim($_POST[$key], '/');
                 $slug = strtolower($slug);
                 $slug = preg_replace("/[^a-zA-Z0-9\/-]/", '', $slug);
                 $slug = str_replace('/', '', $slug);
-    
+
                 \update_option($key, $slug);
             }
         }

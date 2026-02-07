@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Widgets;
  */
+
 namespace BoldizArt\WpTheme;
 
 class Widgets
@@ -22,7 +24,7 @@ class Widgets
     /**
      * WprdPress init function
      */
-    public Function init()
+    public function init()
     {
         /**
          * If Dynamic Sidebar Exists
@@ -30,8 +32,8 @@ class Widgets
         if (function_exists('register_sidebar')) {
             // Define Right Sidebar
             \register_sidebar([
-                'name' => __('Right Sidebar', 'startertheme'),
-                'description' => __('Right sidebar widget area', 'startertheme'),
+                'name' => __('Right Sidebar', 'stellahoreca'),
+                'description' => __('Right sidebar widget area', 'stellahoreca'),
                 'id' => 'widget-area-1',
                 'before_widget' => '<div id="%1$s" class="widget sidebar-widget %2$s">',
                 'after_widget' => '</div>',
@@ -41,18 +43,18 @@ class Widgets
 
             // Define footer widget areas
             $footerWidgetNames = [
-                'subscribe-form' => __('Subscribe form', 'startertheme')
+                'subscribe-form' => __('Subscribe form', 'stellahoreca')
             ];
-            for ($i=1; $i < 8; $i++) { 
-                // $footerWidgetNames["footer-section-[$i]"] = sprintf(__('Footer section %s', 'startertheme'), $i);
-                $footerWidgetNames["footer-section-{$i}"] = sprintf(__('Footer section %s', 'startertheme'), $i);
+            for ($i = 1; $i < 8; $i++) {
+                // $footerWidgetNames["footer-section-[$i]"] = sprintf(__('Footer section %s', 'stellahoreca'), $i);
+                $footerWidgetNames["footer-section-{$i}"] = sprintf(__('Footer section %s', 'stellahoreca'), $i);
             }
 
             foreach ($footerWidgetNames as $key => $name) {
                 \register_sidebar([
                     'name' => $name,
                     'description' => $name,
-                    'id' => $key, 
+                    'id' => $key,
                     'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s">',
                     'after_widget' => '</div>',
                     'before_title' => '<h3 class="widget-title">',

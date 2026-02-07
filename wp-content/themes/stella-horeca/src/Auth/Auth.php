@@ -1,8 +1,10 @@
 <?php
+
 /**
  * @file
  * use BoldizArt\WpTheme\Auth\Auth;
  */
+
 namespace BoldizArt\WpTheme\Auth;
 
 use WP_User;
@@ -15,11 +17,12 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
 class Auth
 {
     /** @param Object $errors */
     public $errors = null;
-  
+
     /** @param String $message */
     public $message = null;
 
@@ -40,13 +43,13 @@ class Auth
             foreach ($meta as $name => $value) {
                 \update_user_meta($id, $name, $value);
             }
-    
+
             return $id;
         }
 
         return false;
     }
-    
+
     /**
      * Authenticate the user
      * @param string $user;
@@ -171,7 +174,7 @@ class Auth
             if ($user && $user->ID) {
                 $data = [
                     'email' => $email,
-                    'token' => uniqid('startertheme', $email),
+                    'token' => uniqid('stellahoreca', $email),
                     'expire' => \strtotime("+{$expireInDays} day"),
                 ];
                 $serialized = serialize($data);
@@ -202,7 +205,7 @@ class Auth
             }
 
             if ($email && filter_var($email, FILTER_SANITIZE_EMAIL)) {
-    
+
                 // Load user by email
                 $user = get_user_by('email', $email);
                 if ($user && $user->ID) {
@@ -212,7 +215,7 @@ class Auth
                     if (is_array($originalData) && isset($originalData['email'], $originalData['token'], $originalData['expire'])) {
                         $originalToken = $originalData['token'];
                         $originalExpire = $originalData['expire'];
-            
+
                         if (\time() > $originalExpire) {
                             return false;
                         }
@@ -221,9 +224,7 @@ class Auth
                             delete_user_meta($user->ID, $name);
                             return $user->ID;
                         }
-
                     }
-
                 }
             }
         }

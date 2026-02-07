@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\Auth\UserAuth;
  */
+
 namespace BoldizArt\WpTheme\Auth;
 
 use BoldizArt\WpTheme\URL;
@@ -82,25 +84,25 @@ class UserAuth extends Auth
     $nonce = wp_create_nonce('startertheme_registration_nonce');
     $response .= '
       <form method="post" class="register-form" action="' . htmlspecialchars(\home_url($wp->request)) . '">
-        <input type="hidden" name="verify" value="'. $nonce .'">
+        <input type="hidden" name="verify" value="' . $nonce . '">
         ' . Chaptcha::create() . '
         <div class="mb-3">
-          <label for="fullname">' . __('Full name', 'startertheme') . '</label>
+          <label for="fullname">' . __('Full name', 'stellahoreca') . '</label>
           <input type="text" class="form-control ' . ($this->errors && isset($this->errors['fullname']) ? 'is-invalid' : '') . '" id="fullname" name="fullname" value="' . (isset($_POST['fullname']) ? \sanitize_text_field($_POST['fullname']) : '') . '" required->
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['fullname']) ? $this->errors['fullname'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <label for="email">' . __('Email', 'startertheme') . '</label>
+          <label for="email">' . __('Email', 'stellahoreca') . '</label>
           <input type="email" class="form-control ' . ($this->errors && isset($this->errors['email']) ? 'is-invalid' : '') . '" id="email" name="email" value="' . (isset($_POST['email']) ? \sanitize_email($_POST['email']) : '') . '" required->
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['email']) ? $this->errors['email'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <label for="password">' . __('Password', 'startertheme') . '</label>
+          <label for="password">' . __('Password', 'stellahoreca') . '</label>
           <input type="password" class="form-control ' . ($this->errors && isset($this->errors['password']) ? 'is-invalid' : '') . '" id="password" name="password" required->
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['password']) ? $this->errors['password'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <input type="submit" class="btn btn-first w-100" value="' . __( 'Register', 'startertheme' ) . '">
+          <input type="submit" class="btn btn-first w-100" value="' . __('Register', 'stellahoreca') . '">
         </div>
       </form>
     ';
@@ -114,10 +116,10 @@ class UserAuth extends Auth
   public function registrationHandler()
   {
     // Check for valid form submission and nonce verification
-    if (isset($_POST['verify']) && wp_verify_nonce( $_POST['verify'], 'startertheme_registration_nonce')) {
+    if (isset($_POST['verify']) && wp_verify_nonce($_POST['verify'], 'startertheme_registration_nonce')) {
       // Captcha verification
       if (!Chaptcha::verify()) {
-        $this->errors['global'] = __('Google reChaptcha verification failed.', 'startertheme');
+        $this->errors['global'] = __('Google reChaptcha verification failed.', 'stellahoreca');
         return;
       }
 
@@ -129,7 +131,7 @@ class UserAuth extends Auth
 
       // Validate name
       if (empty($fullname)) {
-        $this->errors['fullname'] = __('The full name is required.', 'startertheme');
+        $this->errors['fullname'] = __('The full name is required.', 'stellahoreca');
       } else {
         // Fetch the first and last name
         $namearr = explode(' ', $fullname);
@@ -140,23 +142,23 @@ class UserAuth extends Auth
       // // Check for accepted terms
       // $accepted = array_key_exists('terms_accepted', $_POST) ? true : false;
       // if (!$accepted) {
-      //   $this->errors['terms_accepted'] = __('You must to accept our terms and conditions if you want to register in this wesite.', 'startertheme');
+      //   $this->errors['terms_accepted'] = __('You must to accept our terms and conditions if you want to register in this wesite.', 'stellahoreca');
       // }
 
       // Validate email
       if (empty($email)) {
-        $this->errors['email'] = __('Email is required.', 'startertheme');
+        $this->errors['email'] = __('Email is required.', 'stellahoreca');
       } elseif (get_user_by('email', $email)) {
-        $this->errors['email'] = __('The user with this email already registered', 'startertheme');
+        $this->errors['email'] = __('The user with this email already registered', 'stellahoreca');
       }
-        
+
       // Validate password
       if (empty($password)) {
-        $this->errors['password'] = __('Password is required.', 'startertheme');
+        $this->errors['password'] = __('Password is required.', 'stellahoreca');
       } elseif (strlen($password) < 8) {
-        $this->errors['password'] = __('Password mut be at leaset 8 characthers long.', 'startertheme');
+        $this->errors['password'] = __('Password mut be at leaset 8 characthers long.', 'stellahoreca');
       }
-      
+
       // If no errors, create the user
       if (empty($this->errors)) {
 
@@ -168,7 +170,7 @@ class UserAuth extends Auth
         // User created successfully, redirect or display confirmation message
         if ($uid) {
           // Set success message
-          $this->message = __('Successfull registration. Ve have sent a verification email. Please check it.', 'startertheme');
+          $this->message = __('Successfull registration. Ve have sent a verification email. Please check it.', 'stellahoreca');
 
           // Set user info
           $userinfo = [
@@ -186,7 +188,7 @@ class UserAuth extends Auth
           $redirect = URL::create('login', ['message' => $this->message]);
           return $this->redirect($redirect);
         } else {
-          $this->errors['global'] = __('Registration error. Please try again later.', 'startertheme');
+          $this->errors['global'] = __('Registration error. Please try again later.', 'stellahoreca');
         }
       }
     }
@@ -214,20 +216,20 @@ class UserAuth extends Auth
     $nonce = wp_create_nonce('startertheme_login_nonce');
     $response .= '
       <form method="post" class="login-form" action="' . htmlspecialchars(\home_url($wp->request)) . '">
-        <input type="hidden" name="verify" value="'. $nonce .'">
+        <input type="hidden" name="verify" value="' . $nonce . '">
         ' . Chaptcha::create() . '
         <div class="mb-3">
-          <label for="email">' . __('Email', 'startertheme') . '</label>
+          <label for="email">' . __('Email', 'stellahoreca') . '</label>
           <input type="email" class="form-control ' . ($this->errors && isset($this->errors['email']) ? 'is-invalid' : '') . '" id="email" name="email" value="' . (isset($_POST['email']) ? \sanitize_email($_POST['email']) : '') . '" required>
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['email']) ? $this->errors['email'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <label for="password">' . __('Password', 'startertheme') . '</label>
+          <label for="password">' . __('Password', 'stellahoreca') . '</label>
           <input type="password" class="form-control ' . ($this->errors && isset($this->errors['password']) ? 'is-invalid' : '') . '" id="password" name="password" required>
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['password']) ? $this->errors['password'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <input type="submit" class="btn btn-first w-100" value="' . __('Login', 'startertheme') . '">
+          <input type="submit" class="btn btn-first w-100" value="' . __('Login', 'stellahoreca') . '">
         </div>
       </form>
     ';
@@ -245,7 +247,7 @@ class UserAuth extends Auth
     if (isset($_POST['verify']) && wp_verify_nonce($_POST['verify'], 'startertheme_login_nonce')) {
       // Captcha verification
       if (!Chaptcha::verify()) {
-        $this->errors['global'] = __('Google reChaptcha verification failed.', 'startertheme');
+        $this->errors['global'] = __('Google reChaptcha verification failed.', 'stellahoreca');
         return;
       }
 
@@ -256,14 +258,14 @@ class UserAuth extends Auth
       // Get the user by email the address
       $user = \get_user_by('email', $email);
       if (!$user) {
-        $this->errors['global'] = __('Invalid username or password.', 'startertheme');
+        $this->errors['global'] = __('Invalid username or password.', 'stellahoreca');
         return;
       }
 
       // Check if the email address verified
       if (!\get_user_meta($user->ID, 'email_verified', true)) {
         // $this->sendVerificationEmail($user->ID);
-        $this->errors['global'] = __('You need to verify your email address first. The verification link has already sent to your email address.', 'startertheme');
+        $this->errors['global'] = __('You need to verify your email address first. The verification link has already sent to your email address.', 'stellahoreca');
 
         return;
       }
@@ -277,7 +279,7 @@ class UserAuth extends Auth
 
       if (\is_wp_error($authenticated)) {
         $this->errors['global'] = in_array($authenticated->get_error_code(), ['invalid_username', 'incorrect_password']) ?
-          __('Invalid username or password.', 'startertheme') : $authenticated->get_error_code().__('An error occurred during login.', 'startertheme');
+          __('Invalid username or password.', 'stellahoreca') : $authenticated->get_error_code() . __('An error occurred during login.', 'stellahoreca');
 
         return;
       }
@@ -304,14 +306,14 @@ class UserAuth extends Auth
     $response .= '
       <form method="post" class="login-form" action="' . htmlspecialchars(\home_url($wp->request)) . '">
         ' . Chaptcha::create() . '
-        <input type="hidden" name="verify" value="'. $nonce .'">
+        <input type="hidden" name="verify" value="' . $nonce . '">
         <div class="mb-3">
-          <label for="email">' . __('Email', 'startertheme') . '</label>
+          <label for="email">' . __('Email', 'stellahoreca') . '</label>
           <input type="email" class="form-control ' . ($this->errors && isset($this->errors['email']) ? 'is-invalid' : '') . '" id="email" name="email" value="' . (isset($_POST['email']) ? \sanitize_email($_POST['email']) : '') . '" required>
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['email']) ? $this->errors['email'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <input type="submit" class="btn btn-first w-100" value="' . __('Reset password', 'startertheme') . '">
+          <input type="submit" class="btn btn-first w-100" value="' . __('Reset password', 'stellahoreca') . '">
         </div>
       </form>
     ';
@@ -329,7 +331,7 @@ class UserAuth extends Auth
     if (isset($_POST['verify']) && wp_verify_nonce($_POST['verify'], 'startertheme_lost_password_nonce')) {
       // Captcha verification
       if (!Chaptcha::verify()) {
-        $this->errors['global'] = __('Google reChaptcha verification failed.', 'startertheme');
+        $this->errors['global'] = __('Google reChaptcha verification failed.', 'stellahoreca');
         return;
       }
 
@@ -339,7 +341,7 @@ class UserAuth extends Auth
       // Get the user by email the address
       $user = \get_user_by('email', $email);
       if ($user) {
-          
+
         // Generate a reset token
         $verifyToken = $this->createToken($user->user_email, 1, 'password_reset_verification_token');
 
@@ -347,17 +349,17 @@ class UserAuth extends Auth
         $resetPasswordUrl = URL::create('password-reset', ['reset_token' => $verifyToken]);
 
         // Send a verification email to this user
-      // Send a verification email to this user
-      $label = 'Password reset link';
-      $content = '
+        // Send a verification email to this user
+        $label = 'Password reset link';
+        $content = '
         <p>Hi,</p>
         <p>
           You have requested a password reseting. You have 24 hours to do that. If you did not sent a request, you do not have any job.<br />
-          <a href="'.$resetPasswordUrl.'">Click here to reset your password</a>
+          <a href="' . $resetPasswordUrl . '">Click here to reset your password</a>
         </p>
         <p>
           Kind Regards, <br />
-          <a href="'.get_site_url().'">The startertheme tem</a>
+          <a href="' . get_site_url() . '">The stellahoreca tem</a>
         </p>
       ';
         $headers = [
@@ -369,7 +371,7 @@ class UserAuth extends Auth
         \wp_mail($user->user_email, $label, $content, $headers);
       }
 
-      $this->message = __('We will send you a password reset email.', 'startertheme');
+      $this->message = __('We will send you a password reset email.', 'stellahoreca');
     }
   }
 
@@ -384,7 +386,7 @@ class UserAuth extends Auth
     // Chheck if there is a reset token. Otherwize, redirect the useo the lost password form
     $resetToken = array_key_exists('reset_token', $_REQUEST) ? $_REQUEST['reset_token'] : false;
     if (!$resetToken) {
-      $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'startertheme') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'startertheme') . '</a>.';
+      $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'stellahoreca') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'stellahoreca') . '</a>.';
     }
 
     // Set response
@@ -395,19 +397,19 @@ class UserAuth extends Auth
     $response .= '
       <form method="post" class="reset-password-form" action="' . htmlspecialchars(\home_url($wp->request)) . '">
         ' . Chaptcha::create() . '
-        <input type="hidden" name="verify" value="'. $nonce .'">
-        <input type="hidden" name="reset_token" value="'. $resetToken .'">
+        <input type="hidden" name="verify" value="' . $nonce . '">
+        <input type="hidden" name="reset_token" value="' . $resetToken . '">
         <div class="mb-3">
-          <label for="password">' . __('Password', 'startertheme') . '</label>
+          <label for="password">' . __('Password', 'stellahoreca') . '</label>
           <input type="password" class="form-control ' . ($this->errors && isset($this->errors['password']) ? 'is-invalid' : '') . '" id="password" name="password" required>
         </div>
         <div class="mb-3">
-          <label for="password2">' . __('Password again', 'startertheme') . '</label>
+          <label for="password2">' . __('Password again', 'stellahoreca') . '</label>
           <input type="password" class="form-control ' . ($this->errors && isset($this->errors['password']) ? 'is-invalid' : '') . '" id="password2" name="password2" required>
           <div class="invalid-feedback">' . ($this->errors && isset($this->errors['password']) ? $this->errors['password'] : '') . '</div>
         </div>
         <div class="mb-3">
-          <input type="submit" class="btn btn-first w-100" value="' . __('Update password', 'startertheme') . '">
+          <input type="submit" class="btn btn-first w-100" value="' . __('Update password', 'stellahoreca') . '">
         </div>
       </form>
     ';
@@ -425,7 +427,7 @@ class UserAuth extends Auth
     if (isset($_POST['verify']) && wp_verify_nonce($_POST['verify'], 'startertheme_password_reset_nonce')) {
       // Captcha verification
       if (!Chaptcha::verify()) {
-        $this->errors['global'] = __('Google reChaptcha verification failed.', 'startertheme');
+        $this->errors['global'] = __('Google reChaptcha verification failed.', 'stellahoreca');
         return;
       }
 
@@ -435,17 +437,17 @@ class UserAuth extends Auth
 
       // Validate password
       if (empty($password) || empty($password2)) {
-        $this->errors['password'] = __('Password is required.', 'startertheme');
+        $this->errors['password'] = __('Password is required.', 'stellahoreca');
       } elseif (strlen($password) < 8 || strlen($password2) < 8) {
-        $this->errors['password'] = __('Password mut be at leaset 8 characthers long.', 'startertheme');
+        $this->errors['password'] = __('Password mut be at leaset 8 characthers long.', 'stellahoreca');
       } elseif ($password !== $password2) {
-        $this->errors['password'] = __('Passwords are not the same.', 'startertheme');
+        $this->errors['password'] = __('Passwords are not the same.', 'stellahoreca');
       }
 
       // Chheck if there is a reset token. Otherwize, redirect the useo the lost password form
       $resetToken = array_key_exists('reset_token', $_REQUEST) ? $_REQUEST['reset_token'] : false;
       if (!$resetToken) {
-        $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'startertheme') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'startertheme') . '</a>.';
+        $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'stellahoreca') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'stellahoreca') . '</a>.';
       }
 
       // If no errors, create the user
@@ -458,11 +460,11 @@ class UserAuth extends Auth
           $this->logout();
 
           // Redirect with message
-          $this->message = __('Password successfully updated. You can login now.', 'startertheme');
+          $this->message = __('Password successfully updated. You can login now.', 'stellahoreca');
           $redirect = URL::create('login', ['message' => $this->message]);
           return $this->redirect($redirect);
         } else {
-          $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'startertheme') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'startertheme') . '</a>.';
+          $this->errors['global'] = __('Invalid password reset URL. Please ask for a new one.', 'stellahoreca') . ' <a href="' . URL::create('lost-password') . '">' . __('Click here', 'stellahoreca') . '</a>.';
         }
       }
     }
@@ -491,7 +493,7 @@ class UserAuth extends Auth
         </p>
         <p>
           Kind Regards, <br />
-          <a href="'.get_site_url().'">The startertheme team</a>
+          <a href="' . get_site_url() . '">The stellahoreca team</a>
         </p>
       ';
       $headers = [
@@ -517,9 +519,9 @@ class UserAuth extends Auth
       $validUid = $this->verifyToken($verifyToken, 'email_verification_token');
       if ($validUid) {
         \update_user_meta($validUid, 'email_verified', true);
-        $this->message = __('Successfully verified. Now, you can login.', 'startertheme');
+        $this->message = __('Successfully verified. Now, you can login.', 'stellahoreca');
       } else {
-        $this->errors['global'] = __('Unuccessfull verification attempt.', 'startertheme');
+        $this->errors['global'] = __('Unuccessfull verification attempt.', 'stellahoreca');
       }
     }
   }
