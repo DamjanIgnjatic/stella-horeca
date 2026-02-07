@@ -1,0 +1,87 @@
+.btn.btn {
+    font-weight: $font-weight-bold;
+    min-width: 180px;
+    max-width: 100%;
+    min-height: 40px;
+    padding: .8rem 1.6rem .6rem 1.6rem;
+    line-height: 1.1;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    transition: all ease-in-out 280ms;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+    &.btn-icon {
+        padding-right: 2.8rem;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            transform: rotate(45deg);
+            border: 1px solid transparent;
+            border-top-color: $white;
+            border-right-color: $white;
+            top: calc(50% - 4px);
+            right: 1.4rem;
+            transition: border-color ease-in-out 280ms;
+        }
+
+        @media screen and (min-width: $lg) {
+            &::after {
+                right: 1.8rem;
+            }
+        }
+    }
+
+    &.btn-first {
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: $primary-hover;
+            color: $white;
+        }
+    }
+
+    &.btn-second {
+        background-color: $secondary;
+        color: $white;
+
+        &:hover {
+            background-color: $secondary-hover;
+            color: $white;
+        }
+    }
+
+    &.btn-third {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+            border-color: $white;
+            background-color: $white;
+            color: $primary;
+        }
+    }
+
+    &.btn-fourth {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+            border-color: $white;
+            background-color: $white;
+            color: $secondary;
+        }
+    }
+}

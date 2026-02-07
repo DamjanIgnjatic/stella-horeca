@@ -1,0 +1,51 @@
+.no-content {
+    .content {
+        margin: 1rem auto;
+
+        .h1 { 
+            color: $text;
+
+            &.h0 {
+                font-size: 5rem;
+            }
+        }
+
+        .go-home {
+            width: 320px;
+            max-width: 100%;
+            border: 1px solid $text;
+            color: $text;
+
+            &:hover {
+                color: $white;
+                background: $text;
+            }
+        }
+
+        .search-label {
+            color: $gray-500;
+            font-size: 0.8rem;
+            margin-bottom: .5rem;
+            margin-top: 2rem;
+        }
+
+        .no-content-search {
+            width: 320px; 
+            max-width: 100%; 
+            margin: auto; 
+            position: relative;
+
+            .search-submit {
+                right: 0;
+            }
+        }
+    }
+
+    .sidebar {
+        margin: 1rem auto;
+
+        .main-image { 
+            max-width: 80%;
+        }
+    }
+}

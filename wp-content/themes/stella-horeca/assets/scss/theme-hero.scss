@@ -1,0 +1,18 @@
+/*
+This CSS file must be preloaded because of CLS
+Theme: StarterTheme
+Author Boldizar Santo (boldizar.santo@gmail.com)
+Website: startertheme.com
+*/
+
+// Variables
+@import 'theme/variables/index';
+
+// Functions
+@import 'theme/base/index';
+
+// Import Bootsrap style
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Import hero section
+// @import '../../_blocks/hero/hero';

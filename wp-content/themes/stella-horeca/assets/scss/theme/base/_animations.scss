@@ -1,0 +1,91 @@
+// Slide left
+@-webkit-keyframes slide {
+    0% { left: 65%; opacity: 0; }
+    10% { left: 0%; opacity: 1; }
+    100% { left: 0%; opacity: 1; }
+}
+
+@-moz-keyframes slide {
+    0% { left: 65%; opacity: 0; }
+    10% { left: 0%; opacity: 1; }
+    100% { left: 0%; opacity: 1; }
+}
+
+@-o-keyframes slide {
+    0% { left: 65%; opacity: 0; }
+    10% { left: 0%; opacity: 1; }
+    100% { left: 0%; opacity: 0; }
+}
+
+@keyframes slide {
+    0% { left: 65%; opacity: 0; }
+    10% { left: 0%; opacity: 1; }
+    100% { left: 0%; opacity: 1; }
+}
+
+// Slide right
+@-webkit-keyframes slideRight {
+    0% { right: 65%; opacity: 0; }
+    10% { right: 0%; opacity: 1; }
+    100% { right: 0%; opacity: 1; }
+}
+
+@-moz-keyframes slideRight {
+    0% { right: 65%; opacity: 0; }
+    10% { right: 0%; opacity: 1; }
+    100% { right: 0%; opacity: 1; }
+}
+
+@-o-keyframes slideRight {
+    0% { right: 65%; opacity: 0; }
+    10% { right: 0%; opacity: 1; }
+    100% { right: 0%; opacity: 0; }
+}
+
+@keyframes slideRight {
+    0% { right: 65%; opacity: 0; }
+    10% { right: 0%; opacity: 1; }
+    100% { right: 0%; opacity: 1; }
+}
+
+// Modal fade-in animation
+@-webkit-keyframes modal {
+    0% {transform: translateY(10%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+@-moz-keyframes modal {
+    0% {transform: translateY(10%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+@-o-keyframes modal {
+    0% {transform: translateY(10%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes modal {
+    0% {transform: translateY(10%); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+// Fade in
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes modal {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes modal {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes modal {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

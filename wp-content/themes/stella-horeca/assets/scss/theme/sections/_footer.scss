@@ -1,0 +1,36 @@
+/** Footer section */
+footer.footer {
+    .footer-logo {
+        width: 55px;
+        height: auto;
+    }
+
+    .links {
+        .link {
+            display: block;
+            color: $text;
+            padding-bottom: .3rem;
+            font-size: 1rem;
+
+            &:hover {
+                color: $primary-hover;
+            }
+        }
+    }
+
+    .footer-body-section {
+        margin-top: .6rem;
+
+        .footer-body {
+            border-top: 1px solid $border;
+
+            .description {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .copyright {
+        border-top: 1px solid $border;
+    }
+}

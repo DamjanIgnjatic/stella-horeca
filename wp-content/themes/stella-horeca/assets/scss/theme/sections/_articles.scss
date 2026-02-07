@@ -1,0 +1,119 @@
+/** Articles */
+.article-section {
+    &.posts {
+        .post {
+            font-size: 1rem;
+            border-radius: 5px;
+            min-height: 100%;
+
+            &:not(.latest):not(.type-post) {
+                @include box-shadow();
+
+                .post-body {
+                    padding: 0 1.2rem 1.2rem 1.2rem;
+                }
+
+                .image-container {
+                    .wp-post-image {
+                        border-radius: 5px 5px 0 0;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .image-container {
+                a {
+                    border-bottom: none;
+                }
+            }
+
+            .post-body {
+                & > .h4 {
+                    margin-top: 1.2rem;
+                    margin-bottom: 1.2rem;
+
+                    .link {
+                        &:hover {
+                            color: $primary-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-container {
+            .search {
+                margin: 0;
+
+                .search-submit {
+                    background: $primary;
+                    color: $white;
+                    font-weight: bold;
+                    opacity: .85;
+
+                    padding: 22px;
+                    top: 0;
+                    border-radius: 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-description {
+    border-left: 1px solid $border;
+    padding-left: 24px;
+    margin-bottom: 2rem;
+}
+
+.post-details {
+    margin-bottom: .6rem;
+
+    .detail {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+
+        a {
+            display: inline-block;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+        }
+
+        &.reading-time-block {
+            border-left: 1px solid $border;
+        }
+
+        &.post-categories {
+            display: block;
+            padding: 0;
+            margin-bottom: .6rem;
+
+            a {
+                font-size: .85rem;
+                padding: .15rem .6rem;
+                background: $primary;
+                color: $white;
+                font-weight: $font-weight-normal;
+                border-radius: 2px;
+                margin: 0;
+
+                &:hover {
+                    background: $primary-hover;
+                    color: $white;
+                }
+            }
+        }
+
+        &.post-date {
+            padding-left: 0;
+        }
+    }
+}

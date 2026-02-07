@@ -1,0 +1,46 @@
+// Form
+$input-placeholder-color: $gray-400;
+$form-label-margin-bottom: .2rem;
+$form-label-font-size: 0.875rem;
+$form-label-font-style: null;
+$form-label-font-weight: 400;
+$form-label-color: $gray-600;
+
+$input-btn-focus-width: 1px;
+$input-btn-focus-color-opacity: .025;
+$input-btn-focus-color: #00000029;
+$input-btn-focus-blur: 10px;
+$input-btn-focus-box-shadow: 0 3px $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+
+$input-btn-padding-x: 1.8rem;
+$input-btn-padding-y: .64rem;
+
+$input-bg: transparent;
+$custom-select-bg: transparent;
+$custom-select-border-radius: 5px;
+
+input, 
+textarea {
+    color: $text;
+    border-color: $border;
+    ::placeholder {
+        color: $border;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: $border;
+    }
+    ::-ms-input-placeholder {
+        color: $border;
+    }
+}
+.custom-select {
+    color: $text;
+    &.disabled { 
+        color: $border;
+        background:  $light;
+    }
+}
+.form-check-input {
+    margin-top: 0.5rem;
+}

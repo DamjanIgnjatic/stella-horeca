@@ -1,0 +1,94 @@
+// Headings
+@mixin heading() {
+    font-family: $title-font;
+    color: $title;
+    line-height: $title-line-height;
+    letter-spacing: $title-letter-spacing;
+    font-weight: $font-weight-bold;
+
+    a {
+        color: $title;
+        text-decoration: none;
+    }
+}
+
+body {
+    h1, 
+    .h1 {
+        @include heading();
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: calc(36px + (100vw / 200));
+
+        @media only screen and (min-width: $lg) {
+            font-size: 2.6rem;
+        }
+
+        @media only screen and (min-width: $xl) {
+            font-size: 2.8rem;
+        }
+    }
+
+    h2, 
+    .h2 {
+        @include heading();
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: calc(28px + (100vw / 200));
+
+        @media only screen and (min-width: $lg) {
+            font-size: 2.2rem;
+        }
+
+        @media only screen and (min-width: $xxl) {
+            font-size: 2.4rem;
+        }
+    }
+
+    h3, 
+    .h3 {
+        @include heading();
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-size: calc(20px + (100vw / 200));
+
+        @media only screen and (max-width: $md) {
+            font-size: 1.6rem;
+        }
+
+        @media only screen and (min-width: $lg) {
+            font-size: 2rem;
+        }
+    }
+
+    h4,
+    .h4 {
+        @include heading();
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+
+        @media only screen and (max-width: $md) {
+            font-size: 1.4rem;
+        }
+
+        @media only screen and (min-width: $lg) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .separated-title {
+        padding-bottom: 1.6rem;
+
+        @media only screen and (min-width: $sm) {
+            padding-bottom: 2.4rem;
+        }
+    }
+
+    .prepend {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+        letter-spacing: 2.4px;
+    }
+}

@@ -1,0 +1,26 @@
+// Font size
+$font-size: 1rem;
+
+// Font weight
+$font-weight-light: var(--primary-font-weight-light);
+$font-weight-normal: var(--primary-font-weight-normal);
+$font-weight-bold: var(--primary-font-weight-bold);
+$font-weight-base: $font-weight-light;
+
+// Secondary font weight
+$secondary-font-weight-light: var(--secondary-font-weight-light);
+$secondary-font-weight-normal: var(--secondary-font-weight-normal);
+$secondary-font-weight-bold: var(--secondary-font-weight-bold);
+
+// Lihe height
+$title-line-height: 1.1;
+$text-line-height: 1.4;
+$line-height-base: 1.65;
+
+// Letter spacing
+$title-letter-spacing: -.03em;
+$text-letter-spacing: normal;
+
+// Font family
+$title-font: var(--primary-font); // 'Poppins', sans-serif;
+$text-font: var(--secondary-font); // 'Archivo', sans-serif;

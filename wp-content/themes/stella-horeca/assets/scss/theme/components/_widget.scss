@@ -1,0 +1,32 @@
+.widget {
+    font-size: 0.9rem;
+
+    &.sidebar-widget {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid $border;
+    }
+
+    .widget-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+        color: $text;
+        text-align: center;
+        letter-spacing: 3px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: .6rem 0;
+            font-size: 13px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $border;
+            }
+        }
+    }
+}

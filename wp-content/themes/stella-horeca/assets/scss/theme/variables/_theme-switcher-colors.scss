@@ -1,0 +1,62 @@
+// Static theme colors
+$static-white: #fff;
+$static-black: #222;
+$static-light-title: #333;
+$static-light-text: #36334A;
+$static-dark-text: #e2e2e2ff;
+$static-dark-title: #fefefe;
+
+// Default grayscales
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// Default basics
+$light: #f9f9f9 !default;
+$background: #fefefe !default;
+$title: #333 !default;
+$text: #36334A !default;
+$border: #e9ecef !default;
+$gray: #343a40 !default;
+
+// Theme colors
+$primary: #ff6331;
+$primary-hover: #ff460b;
+$secondary: #ff8057;
+$secondary-hover: #FFA60A;
+$gold: #F4AD17;
+$success: #3acc6c;
+$danger: #dd5555;
+
+// Light/dark theme colors
+$light: var(--var-light);
+$background: var(--var-background);
+$title: var(--var-title);
+$text: var(--var-text);
+$border: var(--var-border);
+$gray: var(--var-gray);
+rbga($primary, 15%): var(--var-highlight);
+
+// Grayscales
+$gray-white: var(--var-white);
+$gray-100: var(--var-gray-100);
+$gray-200: var(--var-gray-200);
+$gray-300: var(--var-gray-300);
+$gray-400: var(--var-gray-400);
+$gray-500: var(--var-gray-500);
+$gray-600: var(--var-gray-600);
+$gray-700: var(--var-gray-700);
+$gray-800: var(--var-gray-800);
+$gray-900: var(--var-gray-900);
+$gray-black: var(--var-black);
+
+// Other values
+$shadow-opacity: var(--var--shadow-opacity);

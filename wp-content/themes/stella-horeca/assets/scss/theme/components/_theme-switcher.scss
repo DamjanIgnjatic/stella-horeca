@@ -1,0 +1,24 @@
+.theme-switcher {
+    display: inline-block;
+
+    .switcher-button {
+        padding: .8rem .6rem;
+        border: none;
+        background: transparent;
+        line-height: 1;
+
+        &:focus {
+            outline: none;
+        }
+
+        .switcher-icon {
+            font-size: 1.2rem;
+            color: $text;
+            cursor: pointer;
+
+            &:hover {
+                color: $title;
+            }
+        }
+    }
+}

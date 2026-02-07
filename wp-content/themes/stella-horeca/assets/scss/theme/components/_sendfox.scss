@@ -1,0 +1,11 @@
+.sendfox-form {
+    @media only screen and (max-width: $md) {
+        .form-control {
+            max-width: 60%;
+        }
+
+        .btn {
+            max-width: 40%;
+        }
+    }
+}

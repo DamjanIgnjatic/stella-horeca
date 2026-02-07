@@ -1,0 +1,668 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: startertheme-theme-1.0\n"
+"POT-Creation-Date: 2021-06-04 11:43+0200\n"
+"PO-Revision-Date: 2023-01-16 13:14+0000\n"
+"Last-Translator: Boldizar S. Santo\n"
+"Language-Team: Српски језик\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: startertheme\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.6.3; wp-6.1.1"
+
+#: 404.php:13
+msgid "Ouch!"
+msgstr "Ops!"
+
+#: 404.php:14
+msgid "It looks that the page will not arrive."
+msgstr "Izgleda da se stranica neće pojaviti."
+
+#: 404.php:15
+msgid "Don't wait more!"
+msgstr "Nemoj više čekati!"
+
+#: 404.php:17 no-content.php:9
+msgid "Go Home"
+msgstr "Vrati se nazad"
+
+#: 404.php:22 no-content.php:13
+msgid "Not Found"
+msgstr "Nije pronađeno"
+
+#: author-box.php:24
+msgid "More"
+msgstr "Još"
+
+#: author.php:5
+msgid "Author Archives for - "
+msgstr "Arhiva za autora -"
+
+#: comments.php:3
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr "Ovaj post je zaštićen šifrom. Unesi šifru da vidiš ostale komentare."
+
+#: comments.php:18
+msgid "Comments are closed here."
+msgstr "Ovde su zatvoreni komentari."
+
+#: footer.php:38
+msgid "All rights reserved"
+msgstr "Sva prava zadržana"
+
+#: functions.php:71 functions.php:1140
+msgid "Social media links"
+msgstr "Linkovi za socijalne mreže"
+
+#: functions.php:73
+msgid "Fill out the fields you want to be presented on the web site."
+msgstr "Popuni polja koja želiš da budu prikazana na veb-stranici."
+
+#: functions.php:118
+msgid "Add your "
+msgstr "Dodaj tvoje"
+
+#: functions.php:288
+msgid "Header Menu"
+msgstr "Meni u zaglavlju"
+
+#: functions.php:346
+msgid "Right Sidebar"
+msgstr "Desni Sajdbar"
+
+#: functions.php:347
+msgid "Right sidebar widget area"
+msgstr "Mesto za vidžete na desnom sajdbaru"
+
+#: functions.php:357
+msgid "Footer 1"
+msgstr "Footer 1"
+
+#: functions.php:358
+msgid "Footer 2"
+msgstr "Footer 2"
+
+#: functions.php:359
+msgid "Footer 3"
+msgstr "Footer 3"
+
+#: functions.php:360
+msgid "Subscribe form"
+msgstr "Prijavi se na newsletter"
+
+#: functions.php:416
+msgid "Previous"
+msgstr "Prethodni"
+
+#: functions.php:423
+msgid "Next"
+msgstr "Sledeći"
+
+#: functions.php:473
+msgid "More »"
+msgstr "Još »"
+
+#: functions.php:550
+msgid "Your comment is awaiting moderation."
+msgstr "Tvoj komentar čeka da bude prihvaćen od strane moderatora."
+
+#: functions.php:556
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s na %2$s"
+
+#: functions.php:556
+msgid "(Edit)"
+msgstr "(Izmeni)"
+
+#: functions.php:587
+msgid "Warning: The theme needs the Custom Fields Plugin to function"
+msgstr "Upozorenje: Ova tema zahteva \"Custom Fields\" plagin"
+
+#: functions.php:589
+msgid "Simple Local Avatar"
+msgstr "Lokalni Avatar"
+
+#: functions.php:593
+msgid "Install"
+msgstr "Instaliraj"
+
+#: functions.php:594
+msgid "and"
+msgstr "i"
+
+#: functions.php:594
+msgid "Activate"
+msgstr "Aktivacija"
+
+#: functions.php:596
+#, php-format
+msgid ""
+"<div class=\"error\"><p>Warning: The theme needs the Simple Local Avatar "
+"plugin to function, please %s it."
+msgstr ""
+"<div class=\"error\"><p>Upozorenje: Kako bi tema funkcionisala potrebno je "
+"dodati Simple Local Avatar plugin , molimo te %s to."
+
+#: functions.php:656
+msgid "Processes"
+msgstr "Procesi"
+
+#: functions.php:657
+msgid "Process"
+msgstr "Proces"
+
+#: functions.php:658 functions.php:711 functions.php:760 functions.php:810
+msgid "Add new"
+msgstr "Dodaj novi"
+
+#: functions.php:659
+msgid "Add new process"
+msgstr "Dodaj novi proces"
+
+#: functions.php:660 functions.php:713 functions.php:762 functions.php:812
+#: template-parts/home/about.php:17 template-parts/home/about.php:47
+#: template-parts/service.php:27 template-parts/template-project.php:46
+#: templates/template-plain.php:21 templates/template-services.php:49
+msgid "Edit"
+msgstr "Izmeni"
+
+#: functions.php:661
+msgid "Edit process"
+msgstr "Izmeni proces"
+
+#: functions.php:662
+msgid "New process"
+msgstr "Novi proces"
+
+#: functions.php:663 functions.php:664
+msgid "View process"
+msgstr "Pogledaj proces"
+
+#: functions.php:665
+msgid "Search processes"
+msgstr "Pretraži procese"
+
+#: functions.php:666
+msgid "No process found"
+msgstr "Nije pronađen ni jedan proces"
+
+#: functions.php:667
+msgid "No process found in trash"
+msgstr "U kanti nije pronađen ni jedan proces"
+
+#: functions.php:709
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: functions.php:710
+msgid "Portfolio item"
+msgstr "Stavke u portfoliju"
+
+#: functions.php:712
+msgid "Add new portfolio item"
+msgstr "Dodaj novi projekat u portfolio"
+
+#: functions.php:714
+msgid "Edit portfolio item"
+msgstr "Izmeni portfolio"
+
+#: functions.php:715
+msgid "New portfolio item"
+msgstr "Nova stavka u portfoliju"
+
+#: functions.php:716
+msgid "View portfolio"
+msgstr "Pogledaj portfolio"
+
+#: functions.php:717
+msgid "View portfolio item"
+msgstr "Pogledaj stavke u portfoliju"
+
+#: functions.php:718
+msgid "Search portfolio items"
+msgstr "Pretraži stavke u portfoliju"
+
+#: functions.php:719
+msgid "No portfolio items found"
+msgstr "Nisu pronađene stavke u portfoliju"
+
+#: functions.php:720
+msgid "No portfolio items found in trash"
+msgstr "U kanti nisu pronađene stavke u portfoliju"
+
+#: functions.php:758
+msgid "Services"
+msgstr "Servisi"
+
+#: functions.php:759
+msgid "Service"
+msgstr "Servis"
+
+#: functions.php:761
+msgid "Add new service"
+msgstr "Dodaj novi servis"
+
+#: functions.php:763
+msgid "Edit service"
+msgstr "Izmeni servis"
+
+#: functions.php:764
+msgid "New service"
+msgstr "Novi servis"
+
+#: functions.php:765
+msgid "View services"
+msgstr "Pogledaj servise"
+
+#: functions.php:766
+msgid "View service"
+msgstr "Pogledaj servis"
+
+#: functions.php:767
+msgid "Search services"
+msgstr "Pretraži servise"
+
+#: functions.php:768
+msgid "No services found"
+msgstr "Nije pronađen ni jedan servis"
+
+#: functions.php:769
+msgid "No services found in trash"
+msgstr "U kanti nije pronađen ni jedan servis"
+
+#: functions.php:808
+msgid "Testimonials"
+msgstr "Svedočenja"
+
+#: functions.php:809
+msgid "Testimonial"
+msgstr "Svedočenje"
+
+#: functions.php:811
+msgid "Add new testimonial"
+msgstr "Dodaj novo svedočenje"
+
+#: functions.php:813
+msgid "Edit testimonial"
+msgstr "Izmeni svedočenje"
+
+#: functions.php:814
+msgid "New testimonial"
+msgstr "Novo svedočenje"
+
+#: functions.php:815
+msgid "View testimonials"
+msgstr "Pogledaj svedočenja"
+
+#: functions.php:816
+msgid "View testimonial"
+msgstr "Pogledaj svedočenje"
+
+#: functions.php:817
+msgid "Search testimonials"
+msgstr "Pretraži svedočenja"
+
+#: functions.php:818
+msgid "No testimonials found"
+msgstr "Nije pronađeno ni jedno svedočenje"
+
+#: functions.php:819
+msgid "No testimonials found in trash"
+msgstr "U kanti nije pronađeno ni jedno svedočenje"
+
+#: functions.php:922
+msgid "Related"
+msgstr "Povezano"
+
+#: functions.php:980
+msgid "Related posts"
+msgstr "Povezane objave"
+
+#: functions.php:1104
+msgid "Extra profile information"
+msgstr "Dodatne informacije"
+
+#: functions.php:1108
+msgid "Display email address"
+msgstr "Prikaži email adresu"
+
+#: functions.php:1111
+msgid "If checked, your email address will displayed for site visitors."
+msgstr ""
+"Ukoliko čekiraš ovo polje, tvoja email adresa će se prikazivati posetiocima "
+"sajta."
+
+#: functions.php:1115
+msgid "Display website"
+msgstr "Prikaži veb-sajt"
+
+#: functions.php:1118
+msgid "If checked, your website will displayed for site visitors."
+msgstr ""
+"Ukoliko čekiraš ovo polje, tvoj veb-sajt će se prikazivati posetiocima sajta."
+
+#: functions.php:1122
+msgid "Position"
+msgstr "Pozicija"
+
+#: functions.php:1125
+msgid "Please enter your current position."
+msgstr "Unesi svoju trenutnu poziciju."
+
+#: functions.php:1129
+msgid "Front theme style"
+msgstr "Front- stil teme"
+
+#: functions.php:1132
+msgid "Light"
+msgstr "Svetlo"
+
+#: functions.php:1133
+msgid "Dark"
+msgstr "Tamno"
+
+#: functions.php:1135
+msgid "Select between dark and light theme."
+msgstr "Izaberi između tamne i svetle teme."
+
+#: functions.php:1144
+msgid "Instagram"
+msgstr "Instagram"
+
+#: functions.php:1147
+msgid "Please enter an url to your Instagram profile."
+msgstr "Unesi url za svoj Instagram profil."
+
+#: functions.php:1151
+msgid "Facebook"
+msgstr "Facebook"
+
+#: functions.php:1154
+msgid "Please enter an url to your Facebook profile."
+msgstr "Unesi url za svoj Facebook profil."
+
+#: functions.php:1158
+msgid "Twitter"
+msgstr "Twitter"
+
+#: functions.php:1161
+msgid "Please enter an url to your Twitter profile."
+msgstr "Unesi url za svoj Twitter profil."
+
+#: functions.php:1165
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: functions.php:1168
+msgid "Please enter an url to your Pinterest profile."
+msgstr "Unesi url za svoj Pinterest profil."
+
+#: functions.php:1172
+msgid "Youtube"
+msgstr "Youtube"
+
+#: functions.php:1175
+msgid "Please enter an url to your Youtube profile."
+msgstr "Unesi url za svoj Youtube profil."
+
+#: functions.php:1179
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: functions.php:1182
+msgid "Please enter an url to your LinkedIn profile."
+msgstr "Unesi url za svoj LinkedIn profil."
+
+#: functions.php:1209
+msgid "Email address"
+msgstr "Email adresa"
+
+#: functions.php:1213
+msgid "Client contact"
+msgstr "Kontakt za klijente"
+
+#: functions.php:1219
+msgid "Website"
+msgstr "Veb-sajt"
+
+#: functions.php:1282
+msgid "minutes reading"
+msgstr "minuta čitanja"
+
+#: functions.php:1282
+msgid "minute reading"
+msgstr "minut čitanja"
+
+#: no-content.php:3
+msgid "There are no posts"
+msgstr "Nema objava"
+
+#: no-content.php:4 single-process.php:96 single.php:89
+msgid "Sorry, nothing to display."
+msgstr "Žao nam je, nemamo ništa za prikaz."
+
+#: no-content.php:5
+msgid "Try to search for things you looking for"
+msgstr "Probaj da pretražiš prema onome što te zanima"
+
+#: search.php:4
+msgid "Search Results for - "
+msgstr "Pretraži rezultate za -"
+
+#: searchform.php:4
+msgid "To search, type and hit enter."
+msgstr "Za pretraživanje napiši šta tražiš i pritsni enter."
+
+#: single-portfolio.php:36
+msgid "Visit site"
+msgstr "Pogledaj veb-sajt"
+
+#: single-portfolio.php:169
+msgid "Client"
+msgstr "Klijent"
+
+#: single-portfolio.php:173
+msgid "Goal"
+msgstr "Cilj"
+
+#: single-portfolio.php:177
+msgid "Technologies"
+msgstr "Tehnologije"
+
+#: single-portfolio.php:181
+msgid "Solutions"
+msgstr "Rešenja"
+
+#: single-portfolio.php:185
+msgid "Result"
+msgstr "Rezultat"
+
+#: single-process.php:70 single.php:63
+msgid "Tags: "
+msgstr "Tagovi:"
+
+#: single-service.php:20 single-service.php:94 single-service.php:156
+#: woocommerce/content-single-product.php:44
+msgid "Buy Now"
+msgstr "Kupi Odmah"
+
+#: template-parts/home/about.php:13 template-parts/home/about.php:43
+#: template-parts/home/portfolio.php:52 template-parts/home/services.php:41
+#: template-parts/main.php:9 templates/template-plain.php:17
+msgid "Read more"
+msgstr "Pročitaj više"
+
+#: template-parts/home/team.php:46
+msgid "All team"
+msgstr "Naš tim"
+
+#: template-parts/home/technologies.php:13
+msgid "Front-end"
+msgstr "Front-end"
+
+#: template-parts/home/technologies.php:16
+msgid "Back-end"
+msgstr "Back-end"
+
+#: template-parts/home/technologies.php:19
+msgid "CMS"
+msgstr "CMS"
+
+#: template-parts/package.php:20
+msgid "Check the price"
+msgstr "Proveri cene"
+
+#: template-parts/service.php:21 templates/template-services.php:43
+msgid "hour"
+msgstr "sat"
+
+#: template-parts/service.php:23 templates/template-services.php:45
+#: woocommerce/content-product.php:40
+msgid "View"
+msgstr "Pogledaj"
+
+#: template-parts/service.php:24 templates/template-services.php:46
+msgid "Contact Us"
+msgstr "Kontaktiraj nas"
+
+#: woocommerce/auth/form-login.php:34
+#, php-format
+msgid ""
+"To connect to %1$s you need to be logged in. Log in to your store below, or "
+"<a href=\"%2$s\">cancel and return to %1$s</a>"
+msgstr ""
+"Kako bi se povezao %1$s moraš da se uloguješ. Uloguj se u svoju prodavicu "
+"ispod, ili <a href=\"%2$s\">otkaži i vrati se na %1$s</a>"
+
+#: woocommerce/cart/cart-empty.php:35
+msgid "Return to shop"
+msgstr "Vrati se na šop"
+
+#: woocommerce/cart/cart-shipping.php:54
+msgid "Shipping options will be updated during checkout."
+msgstr "Opcije za isporuku ažuriraće se prilikom plaćanja."
+
+#: woocommerce/cart/cart-shipping.php:62
+msgid "Shipping costs are calculated during checkout."
+msgstr "Troškovi dostave izračunavaju se tokom plaćanja."
+
+#: woocommerce/cart/cart-shipping.php:64
+msgid "Enter your address to view shipping options."
+msgstr "Dodaj svoju email adresu da vidiš opcije."
+
+#: woocommerce/cart/cart-shipping.php:67
+msgid ""
+"There are no shipping options available. Please ensure that your address has "
+"been entered correctly, or contact us if you need any help."
+msgstr ""
+"Nema dostupnih opcija isporuke. Proveri da li je adresa ispravno uneta ili "
+"nas kontaktiraj ako ti je potrebna pomoć."
+
+#: woocommerce/cart/cross-sells.php:24
+msgid "You may be interested in&hellip;"
+msgstr "Možda te i ovo zanima..."
+
+#: woocommerce/cart/shipping-calculator.php:24
+msgid "Calculate shipping"
+msgstr "Izračunaj isporuku"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Moraš biti ulogovan kako bi platio."
+
+#: woocommerce/emails/customer-invoice.php:38
+#: woocommerce/emails/plain/customer-invoice.php:31
+#, php-format
+msgid ""
+"An order has been created for you on %1$s. Your invoice is below, with a "
+"link to make payment when you’re ready: %2$s"
+msgstr ""
+"Tvoja porudžbina je spremna %1$s. Račun se nalazi ispod, sa linkom preko "
+"kojeg možeš da platiš kada budeš bio spreman: %2$s"
+
+#: woocommerce/emails/email-order-details.php:34
+#, php-format
+msgid "[Order #%s]"
+msgstr "[Porudžbina #%s]"
+
+#: woocommerce/loop/result-count.php:28
+msgid "Showing the single result"
+msgstr "Prikazuje se jedini rezultat"
+
+#: woocommerce/myaccount/dashboard.php:35
+#, php-format
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)"
+msgstr "Zdravo %1$s (not %1$s? <a href=\"%2$s\">Odjava</a>)"
+
+#: woocommerce/myaccount/dashboard.php:45
+#, php-format
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">billing address</a>, and <a "
+"href=\"%3$s\">edit your password and account details</a>."
+msgstr ""
+"Na kontrolnoj tabli naloga možeš da vidiš svoje <a href=\"%1$s\">nedavne "
+"porudžbine</a>, upravljaš <a href=\"%2$s\">adresom plaćanja</a>, i <a "
+"href=\"%3$s\">izmeniš svoj pasvord i vidiš detalje naloga</a>."
+
+#: woocommerce/myaccount/dashboard.php:48
+#, php-format
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">shipping and billing addresses</a>, "
+"and <a href=\"%3$s\">edit your password and account details</a>."
+msgstr ""
+"Na kontrolnoj tabli naloga možeš da vidiš svoje <a href=\"%1$s\">nedavne "
+"porudžbine</a>, upravljaš <a href=\"%2$s\">adresom plaćanja</a>, i <a "
+"href=\"%3$s\">izmeniš svoj pasvord i vidiš detalje naloga</a>."
+
+#: woocommerce/myaccount/my-address.php:26
+#: woocommerce/myaccount/my-address.php:35
+msgid "Billing address"
+msgstr "Adresa za plaćanje"
+
+#: woocommerce/myaccount/my-address.php:27
+msgid "Shipping address"
+msgstr "Adresa za isporuku"
+
+#: woocommerce/order/tracking.php:30
+#, php-format
+msgid "Order #%1$s was placed on %2$s and is currently %3$s."
+msgstr "Porudžbina #%1$s je poslata na %2$s i trenutno je %3$s."
+
+#: woocommerce/single-product-reviews.php:89
+msgid "Name"
+msgstr "Ime"
+
+#: woocommerce/single-product-reviews.php:95
+msgid "Email"
+msgstr "Email"
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr "Proizvod je trenutno nedostupan."
+
+#: woocommerce/single-product/related.php:27
+msgid "Related products"
+msgstr "Povezani proizvodi"
+
+#: woocommerce/single-product/tabs/additional-information.php:22
+msgid "Additional information"
+msgstr "Dodatne informacije"
+
+#: woocommerce/single-product/tabs/description.php:22
+msgid "Description"
+msgstr "Opis"
+
+#: woocommerce/single-product/up-sells.php:26
+msgid "You may also like&hellip;"
+msgstr "Možda ti se i ovo sviđa..."

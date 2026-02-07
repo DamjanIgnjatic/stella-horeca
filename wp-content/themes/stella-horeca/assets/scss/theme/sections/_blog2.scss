@@ -1,0 +1,122 @@
+/** Articles */
+.article-section {
+    .post {
+        .wp-post-image {
+            max-width: 80%;
+            margin: auto;
+            height: auto;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .h3 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .post-article {
+        position: relative;
+        padding-bottom: 48px;
+
+        .article-wrapper {
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 4.8rem);
+            left: 0;
+            top: 4.8rem;
+            border-radius: 15px;
+            background-color: $light;
+
+            @media only screen and (min-width: $lg) {
+                height: calc(100% - 9.8rem);
+                top: 9.8rem;
+            }
+        }
+
+        .post-content {
+            padding: 24px;
+            position: relative;
+    
+            .read-more {
+                position: absolute; 
+                left: 24px; 
+                right: 24px; 
+                width: 100%;
+            }
+        }
+    }
+
+    .search-container {
+        .search {
+            margin: 0;
+
+            .search-submit {
+                background: $primary;
+                color: $white;
+                font-weight: bold;
+                opacity: .85;
+
+                padding: 22px;
+                top: 0;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.category-description {
+    border-left: 1px solid $border;
+    padding-left: 24px;
+    margin-bottom: 2rem;
+}
+
+.post-details {
+    margin-bottom: .6rem;
+
+    .detail {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+
+        a {
+            display: inline-block;
+            margin-top: 2.5px;
+            margin-bottom: 2.5px;
+        }
+
+        &.reading-time-block {
+            border-left: 1px solid $border;
+        }
+
+        &.post-categories {
+            display: block;
+            padding: 0;
+            margin-bottom: .6rem;
+
+            a {
+                font-size: .85rem;
+                padding: .4rem 1.2rem;
+                border-radius: 12px;
+                background: $primary;
+                color: $white;
+                font-weight: $font-weight-normal;
+                margin: 0;
+
+                &:hover {
+                    background: $primary-hover;
+                    color: $white;
+                }
+            }
+        }
+
+        &.post-date {
+            padding-left: 0;
+        }
+    }
+}

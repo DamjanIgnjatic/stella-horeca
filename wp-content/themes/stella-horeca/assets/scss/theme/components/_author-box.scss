@@ -1,0 +1,13 @@
+.author-box {
+    margin-top: 0.5rem; 
+    border-radius: 3px;
+    padding: 1.2rem .6rem;
+    background: $light;
+    color: $text;
+    border: 1px solid $gray-200;
+
+    .profile-image {
+        width: 100%;
+        border-radius: 5px;
+    }
+}

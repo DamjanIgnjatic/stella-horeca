@@ -1,0 +1,11 @@
+.wp-block-quote {
+    padding: 1.2rem 1.8rem;
+    background-color: rbga($primary, 15%);
+
+    p {
+        margin-bottom: 0;
+        &::selection {
+            background: rgba($primary, .45);
+        }
+    }
+}

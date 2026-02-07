@@ -1,0 +1,105 @@
+// Section
+.section {
+    & > div {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.block {
+        display: block;
+        width: 100%;
+        padding: 4.8rem 0;
+
+        @media only screen and (min-width: $sm) {
+            padding: 5.2rem 0;
+        }
+
+        @media only screen and (min-width: $xxl) {
+            padding: 6.8rem 0;
+        }
+    }
+
+    &.full-height-mobile {
+        @media only screen and (max-width: $sm) {
+            min-height: 100svh;
+        }
+    }
+
+    &.full-height-tablet {
+        @media only screen and (min-width: $sm) and (max-width: $lg) {
+            min-height: 100vh;
+        }
+    }
+
+    &.full-height-desktop {
+        @media only screen and (min-width: $lg) {
+            min-height: 100vh;
+        }
+    }
+
+    .bg-default,
+    &.bg-default {
+        background-color: $background !important;
+
+        &.show-grid {
+            &::after {
+                background: linear-gradient(135deg, transparent 0%, $background 85%);
+            }
+        }
+    }
+
+    .bg-light,
+    &.bg-light {
+        background-color: $light !important;
+
+        &.show-grid {
+            &::after {
+                background: linear-gradient(135deg, transparent 0%, $light 100%);
+            }
+        }
+    }
+
+    .bg-dark,
+    &.bg-dark {
+        background-color: $black !important;
+
+        &.show-grid {
+            &::after {
+                background: linear-gradient(135deg, transparent 0%, $text 100%);
+            }
+        }
+
+        *:not(.btn):not(.table *) {
+            color: $light !important;
+        }
+    }
+
+    .bg-gradient,
+    &.bg-gradient,
+    .bg-primary,
+    &.bg-primary {
+        background-color: $primary !important;
+        *:not(.table *) {
+            color: $white !important;
+        }
+
+        .btn {
+            background: $white;
+            border-color: $white;
+            color: $static-light-text !important;
+            box-shadow: none;
+
+            &:hover {
+                background: $white;
+                border-color: $white;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .bg-gradient,
+    &.bg-gradient {
+        background: -webkit-linear-gradient(180deg, $primary, $secondary) !important;
+        background: linear-gradient(180deg, $primary, $secondary) !important;
+    }
+}

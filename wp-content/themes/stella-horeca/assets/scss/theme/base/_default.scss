@@ -1,0 +1,69 @@
+// Defaults 
+html, 
+body.startertheme {
+   min-height: 100vh;
+   background: $background;
+   color: $text;
+   font-family: $text-font;
+   font-size: $font-size;
+   font-weight: $font-weight-base;
+   line-height: $line-height-base;
+
+   &.freez {
+      overflow: hidden;
+   }
+
+   &.admin-bar {
+      .navigation-section {
+         top: 32px;
+      }
+   }
+}
+
+hr {
+   border-color: $gray-500;
+}
+
+a {
+   transition: color ease-in-out 240ms;
+   color: $primary;
+
+   &:hover {
+      color: $primary-hover;
+   }
+}
+
+b,
+strong {
+   font-weight: $font-weight-bold;
+}
+
+// Container padding on mobile devices
+@media only screen and (min-width: $xs) {
+   .container {
+      padding-right: 22px;
+      padding-left: 22px;
+   }
+}
+
+.z-index {
+   z-index: 5;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+   border-radius: 0;
+}
+                   
+::-webkit-scrollbar-track {
+   background: $background; 
+}
+
+::-webkit-scrollbar-thumb {
+   background: $border;
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: $secondary;
+}

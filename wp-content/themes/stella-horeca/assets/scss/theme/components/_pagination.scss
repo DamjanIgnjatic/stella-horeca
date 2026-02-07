@@ -1,0 +1,17 @@
+.pagination {
+    padding-top: 1.2rem;
+
+    .page-numbers {
+        transition: all ease-in-out 280ms;
+        text-decoration: none;
+        padding: .6rem 1.2rem;
+        margin-right: .3rem;
+        border-radius: 5px;
+
+        &.current,
+        &:hover {
+            background: $primary;
+            color: $static-white;
+        }
+    }
+}

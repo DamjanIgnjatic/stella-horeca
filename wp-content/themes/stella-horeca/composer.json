@@ -1,0 +1,21 @@
+{
+    "name": "boldizart/wp-theme",
+    "description": "WordPress theme for StarterTheme",
+    "type": "theme",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BoldizArt\\WpTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BoldizArt",
+            "email": "boldizar.santo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "google/apiclient": "^2.0@dev"
+    }
+}

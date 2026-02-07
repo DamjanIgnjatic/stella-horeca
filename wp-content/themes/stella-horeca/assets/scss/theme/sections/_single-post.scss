@@ -1,0 +1,44 @@
+.single-post {
+    word-break: break-word;
+
+    .post-image {
+        padding: 1rem 0;
+
+        .single-post-image {
+            width: 680px;
+            max-width: 100%;
+            height: auto;
+            margin: 1rem auto;
+        }
+    }
+
+    .tags {
+        padding: 1.2rem 0;
+    }
+
+    & > .post {
+        & > h2:not(.h2) {
+            font-size: 1.4rem;
+
+            @media only screen and (min-width: $lg) {
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (min-width: $xxl) {
+                font-size: 1.8rem;
+            }
+        }
+
+        & > h3 {
+            font-size: 1.2rem;
+
+            @media only screen and (max-width: $md) {
+                font-size: 1.4rem;
+            }
+
+            @media only screen and (min-width: $lg) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

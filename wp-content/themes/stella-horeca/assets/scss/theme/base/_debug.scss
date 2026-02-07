@@ -1,0 +1,9 @@
+// Show the images without an alt tag
+body {
+    &.admin-bar {
+        img[alt=""],
+        img:not([alt]) {
+            border: 4px solid $danger;
+        }
+    }
+}

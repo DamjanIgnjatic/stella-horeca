@@ -1,0 +1,29 @@
+.team2-member.team2-member {
+    padding: 1.2rem .6rem;
+    background: $background;
+    border-radius: 5px;
+    min-height: calc(100% - 2.4rem);
+    margin: 1.2rem 0;
+    @include box-shadow();
+
+    .member-image {
+        border-radius: 5px;
+        width: 100%;
+        max-width: 65vw;
+    }
+
+    h3 {
+        margin-bottom: 0;
+        @media (min-width: $lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .position {
+        font-style: italic;
+    }
+
+    .text {
+        margin-top: .6rem;
+    }
+}

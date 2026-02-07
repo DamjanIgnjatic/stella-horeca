@@ -1,0 +1,44 @@
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    .search {
+        margin-bottom: 2rem;
+
+        .search-input {
+            display: block;
+            width: calc(100% - 3.6rem);
+            padding: 0.24rem 2.8rem 0.24rem 0.8rem;
+            line-height: 36px;
+            font-size: 13px;
+            border: 1px solid $border;
+            background: $background;
+            color: $gray-600;
+            outline: none;
+            letter-spacing: .5px;
+        }
+
+        .search-submit {
+            z-index: 2;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            color: $border;
+            position: absolute;
+            top: 0.24rem;
+            right: 0.48rem;
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            padding: 0;
+            font-size: 14px;
+            opacity: 1;
+
+            &:hover {
+                color: $text;
+            }
+        }
+    }
+}

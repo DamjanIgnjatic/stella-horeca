@@ -1,0 +1,26 @@
+.light-content {
+    background: $light;
+}
+
+.wp-block-code {
+    & > code {
+        background: $light;
+        padding: 1.2rem;
+        border: 1px solid $border;
+        border: none;
+        border-radius: 3px;
+        font-family: $text-font;
+        font-size: $font-size;
+    }
+}
+
+::selection {
+    background: rbga($primary, 15%);
+}
+
+s,
+del {
+	text-decoration: none;
+    background: rbga($primary, 15%);
+	padding: 4px
+}

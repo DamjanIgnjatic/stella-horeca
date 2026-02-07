@@ -1,0 +1,28 @@
+// Dark colors
+[data-theme="dark"] {
+    // Dark theme colors
+    --var-light: #232132;
+    --var-background: #26263a;
+    --var-title: #f6f6f6ff;
+    --var-text: #ccc;
+    --var-border: #343a40;
+    --var-gray: #e9ecef;
+    --var-highlight: #3e4750;
+    --var-highlight: #121021;
+
+    // Grayscales
+    --var-black: #fff;
+    --var-gray-900: #f8f9fa;
+    --var-gray-800: #e9ecef;
+    --var-gray-700: #dee2e6;
+    --var-gray-600: #ced4da;
+    --var-gray-500: #adb5bd;
+    --var-gray-400: #6c757d;
+    --var-gray-300: #495057;
+    --var-gray-200: #343a40;
+    --var-gray-100: #212529;
+    --var-white: #000;
+
+    // Others
+    --var--shadow-opacity: 0.15;
+}

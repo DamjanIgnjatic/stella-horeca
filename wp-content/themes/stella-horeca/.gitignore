@@ -1,0 +1,29 @@
+# Ignore the vendor directory
+vendor
+
+# Ignore the node_modules directory
+node_modules
+
+# Ignore CSV files from the documents directory
+documents/*.csv
+
+# Ignore comressed files
+*.rar
+*.tar.gz
+*.zip
+*.gz
+
+# Ignore databse files
+*.sql
+
+# Ignore locak files
+composer.lock
+package-lock.json
+
+# Ignore the log files
+error_log
+*.log
+
+# Ignore the normalize folder
+normalize/*
+ 
