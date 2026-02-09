@@ -31,25 +31,25 @@ class CustomPostTypes
     {
         // Set UI labels for Custom Post Type
         $labels = [
-            'name' => _x('Portfolio', 'Post Type General Name', 'stellahoreca'),
-            'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'stellahoreca'),
-            'menu_name' => __('Portfolio', 'stellahoreca'),
-            'parent_item_colon' => __('Parent portfolio item', 'stellahoreca'),
+            'name' => _x('Products', 'Post Type General Name', 'stellahoreca'),
+            'singular_name' => _x('Products', 'Post Type Singular Name', 'stellahoreca'),
+            'menu_name' => __('Products', 'stellahoreca'),
+            'parent_item_colon' => __('Parent Products item', 'stellahoreca'),
             'all_items' => __('All items', 'stellahoreca'),
-            'view_item' => __('View portfolio item', 'stellahoreca'),
+            'view_item' => __('View Products item', 'stellahoreca'),
             'add_new_item' => __('Add new item', 'stellahoreca'),
             'add_new' => __('Add new', 'stellahoreca'),
-            'edit_item' => __('Edit portfolio item', 'stellahoreca'),
-            'update_item' => __('Update portfolio item', 'stellahoreca'),
-            'search_items' => __('Search portfolio item', 'stellahoreca'),
+            'edit_item' => __('Edit Products item', 'stellahoreca'),
+            'update_item' => __('Update Products item', 'stellahoreca'),
+            'search_items' => __('Search Products item', 'stellahoreca'),
             'not_found' => __('Not hound', 'stellahoreca'),
             'not_found_in_trash'  => __('Not found in trash', 'stellahoreca'),
         ];
 
         // Set other options for Custom Post Type 
         $args = [
-            'label' => __('Portfolio', 'stellahoreca'),
-            'description' => __('Website portfolio', 'stellahoreca'),
+            'label' => __('Products', 'stellahoreca'),
+            'description' => __('Website Products', 'stellahoreca'),
             'labels' => $labels,
             'supports' => [
                 'title',
@@ -83,7 +83,7 @@ class CustomPostTypes
         ];
 
         // Registering your Custom Post Type
-        register_post_type('portfolio', $args);
+        register_post_type('Products', $args);
     }
 
     /**
@@ -121,7 +121,7 @@ class CustomPostTypes
         ];
 
         // Register taxonomy
-        register_taxonomy('projects', ['portfolio'], $args);
-        register_taxonomy_for_object_type('projects', 'portfolio');
+        register_taxonomy('projects', ['Products'], $args);
+        register_taxonomy_for_object_type('projects', 'Products');
     }
 }

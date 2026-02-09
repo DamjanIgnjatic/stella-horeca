@@ -1,0 +1,42 @@
+{
+    "name": "acf/hero-section",
+    "title": "Block - Hero Section section",
+    "description": "Hero Section section",
+    "style": "hero-section-block-style",
+    "script": "hero-section-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "hero-section"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero-section.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}

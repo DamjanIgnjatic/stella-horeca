@@ -1,0 +1,25 @@
+.section-product-hero {
+  background-color: $dark-100;
+  padding: 9.4rem 0 42.6rem;
+
+  &--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    span {
+      color: $primary;
+    }
+
+    p {
+      max-width: 78.8rem;
+      width: 100%;
+    }
+  }
+}

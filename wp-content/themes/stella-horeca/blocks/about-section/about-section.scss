@@ -1,0 +1,55 @@
+// Variables
+@import "../../assets/scss/theme/variables/block-index";
+@import "../../assets/scss/theme/base/mixins";
+
+.section-about {
+  padding: 5.6rem 0 8.5rem;
+  background-color: $dark-100;
+  text-align: center;
+
+  @media (max-width: $lg) {
+    padding: 5rem 0;
+  }
+
+  span {
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $purple-100;
+  }
+
+  h2 {
+    margin-bottom: 3.6rem;
+    position: relative;
+    padding-bottom: 2.6rem;
+
+    @media (max-width: $lg) {
+      margin-bottom: 2.15rem;
+      padding-bottom: 2rem;
+    }
+
+    strong {
+      color: $purple-100;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 6.8rem;
+      height: 5px;
+      background-color: $primary;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  p {
+    max-width: 106.3rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "name": "acf/about-section",
+    "title": "Block - About Section section",
+    "description": "About Section section",
+    "style": "about-section-block-style",
+    "script": "about-section-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "about-section"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "about-section.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}

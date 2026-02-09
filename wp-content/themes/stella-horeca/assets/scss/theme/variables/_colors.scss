@@ -46,8 +46,11 @@ $light: #f9f9f9;
 $background: #fefefe;
 $title: #333;
 $text: #36334a;
-$border: #e9ecef;
+$border: rgba(0, 0, 0, 0.1);
 $gray: #343a40;
 
 // Other values
 $shadow-opacity: 0.045;
+
+// animation
+$transition: all 0.3s ease-in;

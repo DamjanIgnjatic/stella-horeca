@@ -1,0 +1,42 @@
+{
+    "name": "acf/products",
+    "title": "Block - Products section",
+    "description": "Products section",
+    "style": "products-block-style",
+    "script": "products-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "products"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "products.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}

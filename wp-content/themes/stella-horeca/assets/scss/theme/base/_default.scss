@@ -50,4 +50,16 @@ body.stellahoreca {
 
 a {
   text-decoration: none;
+  display: inline-block;
+  color: $white;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+
+  @media (max-width: $lg) {
+    margin-bottom: 2.15rem;
+    font-size: 1.6rem;
+  }
 }

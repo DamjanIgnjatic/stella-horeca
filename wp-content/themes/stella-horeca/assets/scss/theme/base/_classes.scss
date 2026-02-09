@@ -1,2 +1,21 @@
 .horeca-btn {
+  background-color: $primary;
+  font-weight: 700;
+  line-height: 1;
+  transition: $transition;
+  color: $white;
+  border-radius: 6.4rem;
+  border: 1px solid $border;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 17rem;
+  width: 100%;
+
+  &:hover {
+    background-color: $white;
+    color: $primary;
+  }
 }
