@@ -14,15 +14,9 @@
     // Load values and assing defaults
     $title = get_field('title') ?: false;
     ?>
-    <section class="section section-contact block <?php echo $className; ?>"
-        <?php if ($bgUrl): ?>
-        style="background-image: url('<?php echo $bgUrl; ?>');"
-        data-desktop-image="<?php echo $bgUrl; ?>"
-        <?php endif; ?>
-        <?php if ($mobileBgUrl): ?>
-        data-mobile-image="<?php echo $mobileBgUrl; ?>"
-        <?php endif; ?>>
+    <section class="section section-contact block <?php echo $className; ?>">
         <div class="container">
+            <a href="#">Pronadjite najbolje rešenje za vaš prostor! <span>Kontaktirajte nas</span></a>
 
         </div>
     </section>
