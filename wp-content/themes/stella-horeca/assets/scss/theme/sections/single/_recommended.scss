@@ -1,5 +1,33 @@
 .section-recommended {
   display: flex;
+
+  &.all-products {
+    @media (max-width: $lg) {
+      grid-template-columns: 1fr;
+    }
+
+    .section-recommended--product {
+      max-width: 64rem;
+      width: 100%;
+
+      .content {
+        max-width: 48.6rem;
+      }
+
+      &:first-child {
+        background-color: $primary;
+      }
+
+      &:nth-child(2) {
+        background-color: $purple-200;
+      }
+
+      &:last-child {
+        background-color: $purple-300;
+      }
+    }
+  }
+
   @media (max-width: $lg) {
     flex-direction: column;
   }

@@ -1,30 +1,22 @@
 <?php
 $current_id = get_the_ID();
+$args = [
+    'post_type'      => "products",
+    'posts_per_page' => -1,
+    'orderby'        => 'date',
+    'order'          => 'DESC'
+];
 
-if (is_singular(get_post_type())) {
-
-    $args = [
-        'post_type'      => get_post_type(),
-        'posts_per_page' => 2,
-        'post__not_in'   => [$current_id],
-        'orderby'        => 'date',
-        'order'          => 'DESC'
-    ];
-} else {
-
-    $args = [
-        'post_type'      => get_post_type(),
-        'posts_per_page' => -1,
-        'orderby'        => 'date',
-        'order'          => 'DESC'
-    ];
+if (is_singular("products")) {
+    $args["post__not_in"] = [$current_id];
+    $args["posts_per_page"] = 2;
 }
 
 $related = new WP_Query($args);
 
 
 if ($related->have_posts()) : ?>
-    <section class="section section-recommended <?php is_front_page() ? "all-products" : "" ?>">
+    <section class="section section-recommended <?php echo is_front_page() ? "all-products" : "" ?>">
         <?php while ($related->have_posts()) : $related->the_post();
             $description = get_field('description');
         ?>
@@ -37,7 +29,7 @@ if ($related->have_posts()) : ?>
                         </div>
                     <?php endif; ?>
                     <div class="section-recommended--product---description">
-                        <p><?php echo $description ?></p>
+                        <p><?php echo $description ?>tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
                         <p class="learn-more">Saznaj više</p>
                     </div>
                 </div>

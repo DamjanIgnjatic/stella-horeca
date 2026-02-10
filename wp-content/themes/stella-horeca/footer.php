@@ -36,9 +36,6 @@
 								<?php if ($copyright): ?>
 									<small>
 										<?php echo str_replace(['[y]', '[Y]'], date('Y'), $copyright); ?>
-										<?php if (!str_contains($copyright, 'BoldizArt')): ?>
-											<a href="https://boldizart.com/"><?php _e('Web development', 'stellahoreca'); ?> BoldizArt</a>
-										<?php endif; ?>
 									</small>
 								<?php else: ?>
 									<small>&copy; <?php _e('Copyright', 'stellahoreca'); ?> <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> |
