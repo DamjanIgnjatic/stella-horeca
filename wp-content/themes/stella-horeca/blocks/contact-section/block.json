@@ -1,0 +1,42 @@
+{
+    "name": "acf/contact-section",
+    "title": "Block - Contact Section section",
+    "description": "Contact Section section",
+    "style": "contact-section-block-style",
+    "script": "contact-section-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "contact-section"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contact-section.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}
