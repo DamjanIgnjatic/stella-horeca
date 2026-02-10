@@ -1,0 +1,42 @@
+{
+    "name": "acf/about-hero",
+    "title": "Block - About Hero section",
+    "description": "About Hero section",
+    "style": "about-hero-block-style",
+    "script": "about-hero-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "about-hero"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "about-hero.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}
