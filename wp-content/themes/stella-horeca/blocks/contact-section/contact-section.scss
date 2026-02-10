@@ -2,5 +2,66 @@
 @import "../../assets/scss/theme/variables/block-index";
 @import "../../assets/scss/theme/base/mixins";
 
-.contact-section-section-wrapper {
+.section-contact {
+    margin-top: -6rem;
+
+    a {
+        background: $primary;
+        font-weight: 800;
+        font-size: 5rem;
+        line-height: 5.76rem;
+        padding: 3.1rem 3.4rem 3.1rem 4.4rem;
+        color: $white;
+        width: 100%;
+        border-radius: 12.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width:$xxl) {
+            font-size: 4rem;
+            line-height: 4.76rem;
+
+        }
+
+        @media (max-width:$xl) {
+            font-size: 3rem;
+            line-height: 4rem;
+
+        }
+
+        @media (max-width:$lg) {
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+            padding: 2rem;
+
+        }
+
+
+
+
+        span {
+            background: $white;
+            color: $primary;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 1.98rem;
+            border-radius: 6rem;
+            max-width: 23.2rem;
+            width: 100%;
+            height: 5.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width:$lg) {
+                font-size: 1.6rem;
+                line-height: 1.78rem;
+
+            }
+
+        }
+
+    }
 }
