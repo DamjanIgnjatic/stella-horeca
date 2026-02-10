@@ -1,0 +1,42 @@
+{
+    "name": "acf/text-image",
+    "title": "Block - Text-Image section",
+    "description": "Text-Image section",
+    "style": "text-image-block-style",
+    "script": "text-image-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "text-image"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "text-image.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}
