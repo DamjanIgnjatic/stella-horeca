@@ -31,10 +31,9 @@
 					</div>
 					<div class="middle-nav">
 						<?php do_action('theme_navigation'); ?>
+						<a href="#" class="horeca-btn">Kontakirajte nas</a>
 					</div>
-					<div class="right-nav">
-						<a href="horeca-btn">Kontakirajte nas</a>
-					</div>
+
 				</div>
 			</div>
 		</header>

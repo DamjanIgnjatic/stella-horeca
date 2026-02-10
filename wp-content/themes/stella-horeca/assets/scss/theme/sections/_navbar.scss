@@ -1,2 +1,36 @@
 .header {
+    background: $black;
+    height: 10.9rem;
+    display: flex;
+    align-items: center;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .middle-nav {
+
+        display: flex;
+        align-items: center;
+        gap: 8.7rem;
+        width: 100%;
+
+        .theme-menu-content {
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 8.7rem;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .horeca-btn {
+            height: 5rem;
+        }
+    }
 }
