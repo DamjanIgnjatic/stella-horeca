@@ -1,36 +1,126 @@
 /** Footer section */
 footer.footer {
-    .footer-logo {
-        width: 55px;
-        height: auto;
+  margin-top: -6rem;
+  background-color: $black;
+  .footer-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 14.6rem 0 10.6rem;
+    gap: 2rem;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 5rem;
     }
 
-    .links {
-        .link {
-            display: block;
-            color: $text;
-            padding-bottom: .3rem;
-            font-size: 1rem;
+    .column-one {
+      max-width: 52rem;
+      width: 100%;
+    }
 
-            &:hover {
-                color: $primary-hover;
-            }
+    .column-two {
+      max-width: 46.8rem;
+      width: 100%;
+
+      #block-12 {
+        display: flex;
+        margin-top: 7rem;
+        gap: 1.9rem;
+        align-items: center;
+
+        @media (max-width: $lg) {
+          justify-content: center;
+          margin-top: 3rem;
         }
+      }
     }
 
-    .footer-body-section {
-        margin-top: .6rem;
+    h2 {
+      font-weight: 800;
+      font-size: 2.6rem;
+      line-height: 2.88rem;
+      color: $primary;
+      margin-bottom: 2rem;
+    }
 
-        .footer-body {
-            border-top: 1px solid $border;
+    p {
+      font-size: 2rem;
+      line-height: 3.2rem;
 
-            .description {
-                font-size: 1rem;
-            }
+      @media (max-width: $lg) {
+        line-height: 2.15rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .copyright {
+    padding: 1.6rem 0;
+    font-size: 1.4rem;
+    line-height: 2.56rem;
+    color: $white-400;
+    text-align: center;
+    background-color: $white-100;
+    backdrop-filter: blur(12px);
+
+    p {
+      @media (max-width: $lg) {
+        margin: 0;
+      }
+    }
+  }
+
+  form {
+    position: relative;
+    max-width: 46.5rem;
+    width: 100%;
+    margin-top: 5.6rem;
+
+    @media (max-width: $lg) {
+      margin-top: 2rem;
+    }
+
+    .gform_fields {
+      display: block;
+    }
+    input {
+      height: 6rem !important;
+      background-color: transparent !important;
+      padding: 0 1.5rem !important;
+      border: 1px solid $dark-200;
+      border-radius: 6.9rem !important;
+      text-align: left;
+      color: $white !important;
+
+      &::placeholder {
+        color: $white;
+        line-height: 1.8rem;
+      }
+    }
+    .gform-footer {
+      margin-top: 0;
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      max-width: 14.2rem;
+      transform: translateY(-50%);
+      width: 100%;
+
+      input {
+        height: 5rem !important;
+        width: 100% !important;
+        font-weight: 700;
+        background-color: $primary !important;
+        border-radius: 6.1rem !important;
+        transition: $transition !important;
+
+        &:hover {
+          background-color: $white !important;
+          color: $primary !important;
         }
+      }
     }
-
-    .copyright {
-        border-top: 1px solid $border;
-    }
+  }
 }

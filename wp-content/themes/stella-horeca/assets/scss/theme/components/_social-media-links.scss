@@ -1,21 +1,13 @@
 .social-media-links {
-    .link {
-        width: 55px;
-        height: 55px;
-        color: $text;
-        transition: all ease-in-out 480ms;
-        margin: .2rem;
-        border-radius: 50px;
-        border: 1px solid $border;
+  display: flex;
+  align-items: center;
+  gap: 2.9rem;
 
-        &:hover {
-            background: $primary-hover;
-            color: $background;
-        }
+  @media (max-width: $lg) {
+    gap: 2rem;
+  }
 
-        .icon {
-            width: 1.1rem;
-            height: auto;
-        }
-    }
+  a {
+    display: flex;
+  }
 }
