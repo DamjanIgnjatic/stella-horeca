@@ -19,3 +19,44 @@
     color: $primary;
   }
 }
+
+input,
+textarea {
+  height: 6rem !important;
+  background-color: transparent !important;
+  padding: 0 1.5rem !important;
+  border: 1px solid $dark-200;
+  border-radius: 6.9rem !important;
+  text-align: left;
+  color: $white !important;
+
+  &::placeholder {
+    color: $white;
+    line-height: 1.8rem;
+    position: absolute;
+  }
+}
+
+.gform-footer {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  max-width: 14.2rem;
+  transform: translateY(-50%);
+  width: 100%;
+
+  input {
+    height: 5rem !important;
+    width: 100% !important;
+    font-weight: 700;
+    background-color: $primary !important;
+    border-radius: 6.1rem !important;
+    transition: $transition !important;
+
+    &:hover {
+      background-color: $white !important;
+      color: $primary !important;
+    }
+  }
+}
