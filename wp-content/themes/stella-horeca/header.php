@@ -31,9 +31,18 @@
 					</div>
 					<div class="middle-nav">
 						<?php do_action('theme_navigation'); ?>
-						<a href="#" class="horeca-btn">Kontakirajte nas</a>
+
+						<div class="social-contact-wrapper">
+							<?php echo do_shortcode('[social_media_icons]'); ?>
+							<a href="http://localhost:8080/stella-horeca/kontakt" class="horeca-btn">Kontakirajte nas</a>
+						</div>
 					</div>
 
+					<div class="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</div>
 		</header>
