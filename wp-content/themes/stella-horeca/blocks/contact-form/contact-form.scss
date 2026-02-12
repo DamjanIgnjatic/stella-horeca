@@ -1,0 +1,70 @@
+// Variables
+@import "../../assets/scss/theme/variables/block-index";
+@import "../../assets/scss/theme/base/mixins";
+
+.section-contact-form {
+  padding: 8.1rem 0 5.1rem;
+  background-color: $black;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.3);
+
+  @media (max-width: $lg) {
+    padding: 5rem 0;
+  }
+
+  &--title {
+    max-width: 110.56rem;
+    width: 100%;
+    margin: 0 auto 8.1rem;
+
+    @media (max-width: $lg) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  form {
+    max-width: 78.6rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    input {
+      border-radius: 1.6rem !important;
+      text-align: left !important;
+      height: 5.6rem !important;
+      padding: 1.6rem !important;
+    }
+
+    .form_sublabel_below {
+      gap: 2rem !important;
+    }
+
+    textarea {
+      border-radius: 1.6rem !important;
+      height: 28.6rem !important;
+      padding: 1.6rem !important;
+      text-align: left !important;
+    }
+
+    .gform-footer {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 6rem;
+
+      @media (max-width: $lg) {
+        margin-top: 3rem;
+      }
+    }
+
+    input[type="submit"] {
+      max-width: 17rem !important;
+      width: 100% !important;
+      text-align: center !important;
+      border-radius: 6rem !important;
+    }
+  }
+}

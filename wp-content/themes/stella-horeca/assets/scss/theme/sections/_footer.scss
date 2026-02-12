@@ -1,6 +1,5 @@
 /** Footer section */
 footer.footer {
-  margin-top: -6rem;
   background-color: $black;
   .footer-body {
     display: flex;
@@ -13,6 +12,7 @@ footer.footer {
       text-align: center;
       align-items: center;
       gap: 5rem;
+      padding: 5rem;
     }
 
     .column-one {

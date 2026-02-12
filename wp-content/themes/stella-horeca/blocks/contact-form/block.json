@@ -1,0 +1,42 @@
+{
+    "name": "acf/contact-form",
+    "title": "Block - Contact Form section",
+    "description": "Contact Form section",
+    "style": "contact-form-block-style",
+    "script": "contact-form-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "contact-form"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "contact-form.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}
