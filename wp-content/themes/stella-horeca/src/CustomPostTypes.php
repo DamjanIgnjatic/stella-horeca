@@ -83,7 +83,7 @@ class CustomPostTypes
         ];
 
         // Registering your Custom Post Type
-        register_post_type('Products', $args);
+        register_post_type('products', $args);
     }
 
     /**
@@ -121,7 +121,7 @@ class CustomPostTypes
         ];
 
         // Register taxonomy
-        register_taxonomy('projects', ['Products'], $args);
-        register_taxonomy_for_object_type('projects', 'Products');
+        register_taxonomy('projects', ['products'], $args);
+        register_taxonomy_for_object_type('projects', 'products');
     }
 }

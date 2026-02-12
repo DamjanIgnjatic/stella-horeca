@@ -1,4 +1,2 @@
 // DOM content loaded event listener
-document.addEventListener('DOMContentLoaded', function() {
-
-});
+document.addEventListener("DOMContentLoaded", function () {});
