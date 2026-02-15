@@ -24,6 +24,10 @@
         padding: 12.5rem 2rem 17.6rem
           max(2rem, calc((100vw - 148rem) / 2 + 2rem));
       }
+
+      @media (max-width: $md) {
+        padding: 5rem 2rem 5rem max(2rem, calc((100vw - 148rem) / 2 + 2rem));
+      }
     }
 
     @media (max-width: $lg) {

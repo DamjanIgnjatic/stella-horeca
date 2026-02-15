@@ -32,6 +32,14 @@ body.stellahoreca {
   &.open-image-modal {
     overflow: hidden;
   }
+
+  &.menu-open {
+    overflow: hidden;
+
+    .middle-nav {
+      transform: translateX(0);
+    }
+  }
 }
 
 ::-webkit-scrollbar {

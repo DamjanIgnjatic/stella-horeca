@@ -1,11 +1,4 @@
 /** Footer section */
-body.home .footer-body {
-  padding: 14.6rem 0 10.6rem;
-
-  @media (max-width: $lg) {
-    padding: 10.9rem 0 5rem;
-  }
-}
 
 footer.footer {
   background-color: $black;
@@ -130,5 +123,13 @@ footer.footer {
         }
       }
     }
+  }
+}
+
+body.home .footer-body {
+  padding: 14.6rem 0 10.6rem;
+
+  @media (max-width: $lg) {
+    padding: 10.9rem 0 5rem;
   }
 }

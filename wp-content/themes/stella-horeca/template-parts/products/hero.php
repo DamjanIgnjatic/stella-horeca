@@ -9,7 +9,7 @@ $description = get_field("description", $id)
     <div class="container">
         <div class="section-product-hero--wrapper">
             <h1><?php echo get_the_title($id); ?><span>.</span></h1>
-            <p><?php echo $description ?></p>
+            <?php echo the_excerpt($id) ?>
         </div>
     </div>
 </section>

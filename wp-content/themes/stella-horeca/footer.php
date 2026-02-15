@@ -50,7 +50,11 @@
 		<div class="bottom-buttons">
 			<!-- Scroll to top button -->
 			<div class="scroll-to-top bottom-button d-none justify-content-center align-items-center" id="scrollToTop">
-				<i class="fa fa-angle-up"></i>
+				<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="34" cy="34" r="34" transform="rotate(-90 34 34)" fill="#171717" />
+					<path d="M32.5 35C32.5 35.8284 33.1716 36.5 34 36.5C34.8284 36.5 35.5 35.8284 35.5 35L34 35L32.5 35ZM35.0607 11.9393C34.4749 11.3536 33.5251 11.3536 32.9393 11.9393L23.3934 21.4853C22.8076 22.0711 22.8076 23.0208 23.3934 23.6066C23.9792 24.1924 24.9289 24.1924 25.5147 23.6066L34 15.1213L42.4853 23.6066C43.0711 24.1924 44.0208 24.1924 44.6066 23.6066C45.1924 23.0208 45.1924 22.0711 44.6066 21.4853L35.0607 11.9393ZM34 35L35.5 35L35.5 13L34 13L32.5 13L32.5 35L34 35Z" fill="#A800BA" />
+				</svg>
+
 			</div>
 		</div>
 

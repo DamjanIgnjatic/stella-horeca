@@ -1,27 +1,11 @@
 .bottom-buttons {
-    z-index: 5;
-    position: fixed;
-    right: .9rem;
-    bottom: .9rem;
-    width: 55px;
-    height: auto;
+  z-index: 5;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.9rem;
 
-    .bottom-button {
-        position: relative;
-        margin-top: .4rem;
-        width: 55px;
-        height: 55px;
-        background: $background;
-        color: $text;
-        font-size: 1.4rem;
-        border: 1px solid $border;
-        border-radius: 50px;
-        transition: all ease-in-out 480ms;
-
-        &:hover {
-            background: $primary;
-            color: $static-white;
-            cursor: pointer;
-        }
-    }
+  .bottom-button {
+    cursor: pointer;
+  }
 }

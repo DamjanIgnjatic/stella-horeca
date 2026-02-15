@@ -1,7 +1,9 @@
 <?php
+
 /**
  * use BoldizArt\WpTheme\AcfSupport;
  */
+
 namespace BoldizArt\WpTheme;
 
 class AcfSupport
@@ -44,17 +46,17 @@ class AcfSupport
      */
     public function registerCustomBlocks()
     {
-        $blocks = array_filter(glob(__DIR__.'/../blocks/*'), 'is_dir');
+        $blocks = array_filter(glob(__DIR__ . '/../blocks/*'), 'is_dir');
         $blockSlugs = [];
 
         foreach ($blocks as $block) {
             \register_block_type($block);
             $sections = explode('/', $block);
             $name = end($sections);
-            $blockSlugs[] = 'acf/'.$name;
+            $blockSlugs[] = 'acf/' . $name;
             $this->createBlockFieldGroup($name);
-            \wp_register_style("{$name}-block-style", get_template_directory_uri()."/dist/css/blocks/{$name}/{$name}.css", ASSETS_VERSION);
-            \wp_register_script("{$name}-block-script", get_template_directory_uri()."/dist/js/blocks/{$name}/{$name}.js", ['acf'], ASSETS_VERSION);
+            \wp_register_style("{$name}-block-style", get_template_directory_uri() . "/dist/css/blocks/{$name}/{$name}.css", ASSETS_VERSION);
+            \wp_register_script("{$name}-block-script", get_template_directory_uri() . "/dist/js/blocks/{$name}/{$name}.js", ['acf'], ASSETS_VERSION);
         }
 
         $this->deleteFieldGroups($blockSlugs);
@@ -64,9 +66,10 @@ class AcfSupport
      * Add ACF JSON save point
      * @param string $path
      */
-    public function acfJsonSavePoint($path) {
+    public function acfJsonSavePoint($path)
+    {
         // Update path
-        $path = get_stylesheet_directory().'/acf-json';
+        $path = get_stylesheet_directory() . '/acf-json';
 
         // Return path
         return $path;
@@ -82,7 +85,7 @@ class AcfSupport
         unset($paths[0]);
 
         // Update path
-        $paths[] = get_stylesheet_directory().'/acf-json';
+        $paths[] = get_stylesheet_directory() . '/acf-json';
 
         // Return path
         return $paths;
@@ -94,37 +97,37 @@ class AcfSupport
     public function addOptionsPage()
     {
         if (function_exists('acf_add_options_page')) {
-        
+
             acf_add_options_page([
-                'page_title' 	=> 'Theme options page',
-                'menu_title'	=> 'Theme options',
-                'menu_slug' 	=> 'theme-options',
-                'capability'	=> 'edit_posts',
-                'redirect'		=> false
+                'page_title'     => 'Theme options page',
+                'menu_title'    => 'Theme options',
+                'menu_slug'     => 'theme-options',
+                'capability'    => 'edit_posts',
+                'redirect'        => false
             ]);
 
             acf_add_options_sub_page([
-                'page_title' 	=> 'Social media links',
-                'menu_title'	=> 'Social media links',
-                'parent_slug'	=> 'theme-options',
+                'page_title'     => 'Social media links',
+                'menu_title'    => 'Social media links',
+                'parent_slug'    => 'theme-options',
             ]);
 
             acf_add_options_sub_page([
-                'page_title' 	=> 'Cookie consent',
-                'menu_title'	=> 'Cookie consent',
-                'parent_slug'	=> 'theme-options',
+                'page_title'     => 'Cookie consent',
+                'menu_title'    => 'Cookie consent',
+                'parent_slug'    => 'theme-options',
             ]);
 
             acf_add_options_sub_page([
-                'page_title' 	=> 'Dynamic modals',
-                'menu_title'	=> 'Dynamic modals',
-                'parent_slug'	=> 'theme-options',
+                'page_title'     => 'Dynamic modals',
+                'menu_title'    => 'Dynamic modals',
+                'parent_slug'    => 'theme-options',
             ]);
 
             acf_add_options_sub_page([
-                'page_title' 	=> 'Footer section',
-                'menu_title'	=> 'Footer section',
-                'parent_slug'	=> 'theme-options',
+                'page_title'     => 'Footer section',
+                'menu_title'    => 'Footer section',
+                'parent_slug'    => 'theme-options',
             ]);
         }
     }
@@ -132,7 +135,8 @@ class AcfSupport
     /**
      * Hide the update message for the ACF pro plugin
      */
-    public function preventAutoUpdate($value) {
+    public function preventAutoUpdate($value)
+    {
         if (is_object($value) && isset($value->response) && is_array($value->response)) {
             if (array_key_exists('advanced-custom-fields-pro/acf.php', $value->response)) {
                 unset($value->response['advanced-custom-fields-pro/acf.php']);
@@ -162,7 +166,7 @@ class AcfSupport
                         '0' => [
                             'param' => 'block',
                             'operator' => '==',
-                            'value' => 'acf/'.$name
+                            'value' => 'acf/' . $name
                         ]
                     ]
                 ],
@@ -174,11 +178,11 @@ class AcfSupport
                 'description' => '',
                 'show_in_rest' => 0
             ];
-            
+
             $args = [
                 'post_date' => date('Y-m-d H:i:s'),
                 'post_content' => serialize($groupContent),
-                'post_title' => 'Block - '.$name,
+                'post_title' => 'Block - ' . $name,
                 'post_excerpt' => $name,
                 'post_status' => 'publish',
                 'comment_status' => 'closed',
@@ -208,7 +212,7 @@ class AcfSupport
             foreach ($groups as $group) {
                 $content = unserialize($group->post_content);
                 if (substr($group->post_title, 0, 7) === "Block - " && isset($content['location'][0][0]['value'])) {
-        
+
                     // Delete the field group if the depended block has deleted
                     if (!in_array($content['location'][0][0]['value'], $slugs)) {
                         \wp_trash_post($group->ID);
@@ -258,7 +262,7 @@ class AcfSupport
         $path = str_replace('\\', '/', $path);
         $path = str_replace('.php', '.png', $path);
         $url = home_url($path);
-    
-        echo '<img src="'.$url.'" style="width:100%; height:auto;">';
+
+        echo '<img src="' . $url . '" style="width:100%; height:auto;">';
     }
 }

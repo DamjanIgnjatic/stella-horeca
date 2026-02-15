@@ -29,7 +29,7 @@ if ($related->have_posts()) : ?>
                         </div>
                     <?php endif; ?>
                     <div class="section-recommended--product---description">
-                        <p><?php echo $description ?>tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
+                        <p><?php echo the_excerpt($id) ?></p>
                         <p class="learn-more">Saznaj više</p>
                     </div>
                 </div>
