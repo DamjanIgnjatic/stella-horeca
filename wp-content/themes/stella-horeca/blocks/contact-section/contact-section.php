@@ -13,11 +13,18 @@
 
     // Load values and assing defaults
     $title = get_field('title') ?: false;
+    $link = get_field('link') ?: false;
     ?>
     <section class="section section-contact block <?php echo $className; ?>">
         <div class="container">
-            <a href="#">Pronadjite najbolje rešenje za vaš prostor! <span>Kontaktirajte nas</span></a>
+            <?php if ($link) :
+                $link_url = $link["url"];
+                $link_title = $link["title"];
+                $link_target = $link['target'] ? $link['target'] : '_self';
 
+            ?>
+                <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo $title ?> <span><?php echo esc_html($link_title); ?></span></a>
+            <?php endif; ?>
         </div>
     </section>
 <?php endif; ?>
