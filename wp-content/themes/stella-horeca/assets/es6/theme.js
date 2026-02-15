@@ -20,8 +20,8 @@ const Navigations = require("./components/navigation");
 Navigations.init();
 
 // Image gallery
-// const ImageGallery = require("./components/image-gallery");
-// ImageGallery.init();
+const ImageGallery = require("./components/image-gallery");
+ImageGallery.init();
 
 // Hamburger
 const Hamburger = require("./components/hamburger");
