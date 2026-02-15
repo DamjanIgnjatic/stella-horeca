@@ -1,10 +1,18 @@
 /** Footer section */
+body.home .footer-body {
+  padding: 14.6rem 0 10.6rem;
+
+  @media (max-width: $lg) {
+    padding: 10.9rem 0 5rem;
+  }
+}
+
 footer.footer {
   background-color: $black;
   .footer-body {
     display: flex;
     justify-content: space-between;
-    padding: 14.6rem 0 10.6rem;
+    padding: 9.5rem 0 10.6rem;
     gap: 2rem;
 
     @media (max-width: $lg) {
@@ -12,7 +20,7 @@ footer.footer {
       text-align: center;
       align-items: center;
       gap: 5rem;
-      padding: 5rem;
+      padding: 5rem 0;
     }
 
     .column-one {
