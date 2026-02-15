@@ -28,6 +28,10 @@ body.stellahoreca {
       top: 32px;
     }
   }
+
+  &.open-image-modal {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar {

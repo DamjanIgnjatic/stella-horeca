@@ -1,18 +1,18 @@
 {
-    "name": "acf/contact",
-    "title": "Block - Contact section",
-    "description": "Contact section",
-    "style": "contact-block-style",
-    "script": "contact-block-script",
+    "name": "acf/gallery",
+    "title": "Block - Gallery section",
+    "description": "Gallery section",
+    "style": "gallery-block-style",
+    "script": "gallery-block-script",
     "category": "design",
     "icon": "editor-paste-text",
     "apiVersion": 2,
     "keywords": [
-        "contact"
+        "gallery"
     ],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "contact.php",
+        "renderTemplate": "gallery.php",
         "postTypes": [
             "post", 
             "page"
