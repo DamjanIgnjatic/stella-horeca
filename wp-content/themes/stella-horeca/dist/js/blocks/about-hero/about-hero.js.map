@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../blocks/about-hero/about-hero.js"],
+  "sourcesContent": ["// DOM content loaded event listener\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {});\r\n"],
+  "mappings": "MACA,SAAS,iBAAiB,mBAAoB,UAAY,CAAC,CAAC",
+  "names": []
+}

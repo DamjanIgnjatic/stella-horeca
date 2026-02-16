@@ -1,6 +1,12 @@
 .section-product-hero {
   background-color: $dark-100;
   padding: 9.4rem 0 42.6rem;
+  z-index: 3;
+  position: relative;
+
+  @media (max-width: $lg) {
+    padding: 5rem 0;
+  }
 
   &--wrapper {
     display: flex;

@@ -1,42 +1,37 @@
 {
-    "name": "acf/gallery",
-    "title": "Block - Gallery section",
-    "description": "Gallery section",
-    "style": "gallery-block-style",
-    "script": "gallery-block-script",
-    "category": "design",
-    "icon": "editor-paste-text",
-    "apiVersion": 2,
-    "keywords": [
-        "gallery"
-    ],
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "gallery.php",
-        "postTypes": [
-            "post", 
-            "page"
-        ]
+  "name": "acf/gallery",
+  "title": "Block - Gallery section",
+  "description": "Gallery section",
+  "style": "gallery-block-style",
+  "script": "gallery-block-script",
+  "category": "design",
+  "icon": "editor-paste-text",
+  "apiVersion": 2,
+  "keywords": ["gallery"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "gallery.php",
+    "postTypes": ["products", "page"]
+  },
+  "styles": [],
+  "supports": {
+    "align": "full",
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": true,
+      "link": false
     },
-    "styles": [],
-    "supports": {
-        "align": "full",
-        "anchor": false,
-        "alignContent": false,
-        "color": {
-            "text": false,
-            "background": true,
-            "link": false
-        },
-        "alignText": false,
-        "fullHeight": false
-    },
-    "attributes": {},
-    "example": {
-        "attributes": {
-            "data": {
-                "previewImage" : true
-            }
-        }
+    "alignText": false,
+    "fullHeight": false
+  },
+  "attributes": {},
+  "example": {
+    "attributes": {
+      "data": {
+        "previewImage": true
+      }
     }
+  }
 }

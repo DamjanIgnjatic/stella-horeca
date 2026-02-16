@@ -98,9 +98,6 @@
                             <?php endif; ?>
 
                         </div>
-
-
-
                         <div class="images-wrapper--open-image">
                             <p>1/20</p>
                             <p>Naziv slike</p>
@@ -111,24 +108,26 @@
                     </div>
                 <?php endif; ?>
 
-                <div class="images-wrapper--container">
-                    <?php
-                    if ($images && is_array($images)) : ?>
-                        <div class="images-wrapper--container-small">
-                            <?php
-                            foreach ($images as $key => $row) :
-                                $image = $row['image'] ?? '';
-                                $data_active = $key + 1;
-                            ?>
-                                <img
-                                    data-active="<?php echo $data_active ?>"
-                                    src="<?php echo esc_url($image['url']); ?>"
-                                    alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <?php
-                            endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
+                <?php if (count($images) > 1) : ?>
+                    <div class="images-wrapper--container">
+                        <?php
+                        if ($images && is_array($images)) : ?>
+                            <div class="images-wrapper--container-small">
+                                <?php
+                                foreach ($images as $key => $row) :
+                                    $image = $row['image'] ?? '';
+                                    $data_active = $key + 1;
+                                ?>
+                                    <img
+                                        data-active="<?php echo $data_active ?>"
+                                        src="<?php echo esc_url($image['url']); ?>"
+                                        alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php
+                                endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
 

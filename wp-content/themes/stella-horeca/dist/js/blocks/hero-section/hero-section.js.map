@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../blocks/hero-section/hero-section.js"],
+  "sourcesContent": ["// DOM content loaded event listener\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n\r\n});\r\n"],
+  "mappings": "MACA,SAAS,iBAAiB,mBAAoB,UAAW,CAEzD,CAAC",
+  "names": []
+}

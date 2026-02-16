@@ -14,6 +14,7 @@ Modal.init();
 
 // Include vertical slider
 const Accordions = require("./components/accordions");
+
 Accordions.init();
 
 const Navigations = require("./components/navigation");

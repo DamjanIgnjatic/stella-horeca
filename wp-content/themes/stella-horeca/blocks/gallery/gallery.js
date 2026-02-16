@@ -299,8 +299,10 @@ document.addEventListener("DOMContentLoaded", function () {
     startY = 0;
   });
 
-  btnNext.addEventListener("click", nextImage);
-  btnPrev.addEventListener("click", prevImage);
+  if (btnNext && btnPrev) {
+    btnNext.addEventListener("click", nextImage);
+    btnPrev.addEventListener("click", prevImage);
+  }
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevImage();

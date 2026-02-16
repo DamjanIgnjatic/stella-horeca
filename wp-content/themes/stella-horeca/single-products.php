@@ -2,6 +2,7 @@
 <main role="main">
     <div class="blocks">
         <?php get_template_part('template-parts/products/hero') ?>
+        <?php the_content() ?>
         <?php get_template_part('template-parts/products/catalog') ?>
         <?php get_template_part('template-parts/products/recommended') ?>
     </div>

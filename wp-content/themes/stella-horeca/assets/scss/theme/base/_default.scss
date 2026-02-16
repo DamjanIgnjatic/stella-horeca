@@ -18,6 +18,7 @@ body.stellahoreca {
   font-size: $font-size;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
+  position: relative;
 
   &.freez {
     overflow: hidden;
@@ -38,6 +39,20 @@ body.stellahoreca {
 
     .middle-nav {
       transform: translateX(0);
+    }
+
+    .hamburger {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
     }
   }
 }
