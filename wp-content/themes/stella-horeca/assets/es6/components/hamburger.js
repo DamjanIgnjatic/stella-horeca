@@ -14,16 +14,13 @@ let _this = (module.exports = {
     const hamburger = document.querySelector(".hamburger");
     const socialIcons = document.querySelectorAll(".social-media-icons");
     const body = document.body;
+    
 
     hamburger.addEventListener("click", () => {
       body.classList.toggle("menu-open");
     });
 
-    // navItems.forEach((item) => {
-    //   item.addEventListener("click", () => {
-    //     body.classList.remove("menu-open");
-    //   });
-    // });
+    
 
     socialIcons.forEach((icon) => {
       icon.addEventListener("click", () => {
@@ -32,10 +29,24 @@ let _this = (module.exports = {
     });
   },
 
+  submenu: function(){
+    const openSubmenu=document.querySelector(".menu-item-has-children");
+
+    openSubmenu.addEventListener("click", () =>{
+      openSubmenu.classList.toggle("submenu-open");
+
+
+    })
+
+  },
+
   /**
    * Init functions
    */
   init: function () {
     this.hamburger();
+    this.submenu();
   },
+
+
 });

@@ -34,7 +34,7 @@
 
 						<div class="social-contact-wrapper">
 							<?php echo do_shortcode('[social_media_icons]'); ?>
-							<a href="http://localhost:8080/stella-horeca/kontakt" class="horeca-btn">Kontakirajte nas</a>
+							<a href="http://localhost:8080/stella-horeca/kontakt" class="horeca-btn">Kontaktirajte nas</a>
 						</div>
 					</div>
 

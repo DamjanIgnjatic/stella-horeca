@@ -28,6 +28,7 @@ ImageGallery.init();
 const Hamburger = require("./components/hamburger");
 Hamburger.init();
 
+
 /**
  * On content loaded
  */
