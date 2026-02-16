@@ -100,6 +100,10 @@
               height: 2rem;
               pointer-events: auto;
               background: transparent;
+
+              @media (max-width: $lg) {
+                display: none;
+              }
             }
           }
 
@@ -166,6 +170,13 @@
               &:hover {
                 background-color: $primary;
                 color: $white;
+              }
+
+              @media (max-width: $lg) {
+                &:hover {
+                  color: $primary;
+                  background-color: transparent;
+                }
               }
             }
           }
