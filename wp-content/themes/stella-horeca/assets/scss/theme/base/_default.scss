@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body.stellahoreca {
@@ -19,7 +20,6 @@ body.stellahoreca {
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   position: relative;
-  overflow-x: hidden;
 
   &.freez {
     overflow: hidden;
