@@ -24,10 +24,13 @@ Navigations.init();
 const ImageGallery = require("./components/image-gallery");
 ImageGallery.init();
 
+// Animations
+const Animation = require("./components/animation");
+Animation.init();
+
 // Hamburger
 const Hamburger = require("./components/hamburger");
 Hamburger.init();
-
 
 /**
  * On content loaded

@@ -16,7 +16,7 @@ $related = new WP_Query($args);
 
 
 if ($related->have_posts()) : ?>
-    <section class="section section-recommended <?php echo !is_singular('products') ? "all-products" : "" ?>">
+    <section class="section section-recommended block animated left-to-right <?php echo !is_singular('products') ? "all-products" : "" ?>">
         <?php while ($related->have_posts()) : $related->the_post();
             $description = get_field('description');
         ?>

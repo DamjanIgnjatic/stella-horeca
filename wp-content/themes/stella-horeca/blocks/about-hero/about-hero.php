@@ -28,7 +28,7 @@
         data-mobile-image="<?php echo $mobileBgUrl; ?>"
         <?php endif; ?>>
         <div class="container">
-            <div class="section-about-hero--text-image">
+            <div class="section-about-hero--text-image animated left-to-right">
                 <div class="description">
                     <?php if ($description) : ?>
                         <?php echo $description ?>
@@ -41,7 +41,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="section-about-hero--text-text">
+            <div class="section-about-hero--text-text animated right-to-left">
                 <?php if ($left_description) : ?>
                     <div>
                         <?php echo $left_description ?>

@@ -1,10 +1,10 @@
 {
-    "key": "group_6987a0b68d5b5",
-    "title": "Products",
+    "key": "group_6994740d4508b",
+    "title": "Block - catalog",
     "fields": [
         {
-            "key": "field_6987a0b74fd04",
-            "label": "Hero Content",
+            "key": "field_699474a13d900",
+            "label": "Content",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -21,25 +21,7 @@
             "selected": 0
         },
         {
-            "key": "field_6987a1349c604",
-            "label": "Catalog Content",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6987a1469c606",
+            "key": "field_699474a83d901",
             "label": "Catalog Description",
             "name": "catalog_description",
             "aria-label": "",
@@ -60,7 +42,7 @@
             "delay": 0
         },
         {
-            "key": "field_6987a1569c607",
+            "key": "field_699474b43d902",
             "label": "Catalog Link",
             "name": "catalog_link",
             "aria-label": "",
@@ -80,9 +62,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "products"
+                "value": "acf\/catalog"
             }
         ]
     ],
@@ -96,5 +78,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1771182333
+    "modified": 1771336902
 }

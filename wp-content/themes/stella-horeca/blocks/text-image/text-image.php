@@ -17,7 +17,7 @@
     $image_left = get_field('image_left') ?: false;
     $image_right = get_field('image_right') ?: false;
     ?>
-    <section class="section section-text-image block <?php echo $className; ?>">
+    <section class="section section-text-image block animated right-to-left <?php echo $className; ?>">
         <div class="section-text-image-left"
             style="background-image: url('<?php echo $image_left["url"]; ?>');">
 

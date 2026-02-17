@@ -1,8 +1,11 @@
 .section-product-hero {
-  background-color: $dark-100;
   padding: 9.4rem 0 42.6rem;
   z-index: 3;
   position: relative;
+  background-image: url("../../images/single-hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: $lg) {
     padding: 5rem 0;

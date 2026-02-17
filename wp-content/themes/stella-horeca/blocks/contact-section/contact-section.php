@@ -15,7 +15,7 @@
     $title = get_field('title') ?: false;
     $link = get_field('link') ?: false;
     ?>
-    <section class="section section-contact block <?php echo $className; ?>">
+    <section class="section section-contact block animated fade-in <?php echo $className; ?>">
         <div class="container">
             <?php if ($link) :
                 $link_url = $link["url"];

@@ -6,8 +6,12 @@
 				<?php
 				// the_content();
 				$content = get_the_content();
+
 				echo apply_filters('block_content', $content);
 				?>
+				<?php if (is_page('rentanje-oprema')) : ?>
+					<?php get_template_part('template-parts/products/recommended') ?>
+				<?php endif ?>
 			<?php endwhile; ?>
 		<?php else: ?>
 			<?php get_template_part('template-parts/no-content', 'No content'); ?>

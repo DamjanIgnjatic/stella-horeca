@@ -16,7 +16,7 @@
     $description = get_field('description') ?: false;
     $images = get_field('images') ?: false;
     ?>
-    <section class="section section-gallery block <?php echo $className; ?>"
+    <section class="section section-gallery block <?php echo $className; ?> <?php echo count($images) === 1 ? "single" : "" ?>"
         <?php if ($bgUrl): ?>
         style="background-image: url('<?php echo $bgUrl; ?>');"
         data-desktop-image="<?php echo $bgUrl; ?>"

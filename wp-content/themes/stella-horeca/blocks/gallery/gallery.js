@@ -330,14 +330,23 @@ document.addEventListener("DOMContentLoaded", function () {
 </svg>`;
 
   openImage.addEventListener("click", () => {
-    const currentModalSlide =
-      currSlide === 0
-        ? realSlidesCount
-        : currSlide === totalSlidesCount - 1
-          ? 1
-          : currSlide;
+    let currentImage;
 
-    const currentImage = allImages[currentModalSlide];
+    if (allImages.length === 1) {
+      currentImage = allImages[0];
+    } else {
+      const currentModalSlide =
+        currSlide === 0
+          ? realSlidesCount
+          : currSlide === totalSlidesCount - 1
+            ? 1
+            : currSlide;
+
+      currentImage = allImages[currentModalSlide];
+    }
+
+    if (!currentImage) return;
+
     const currentImageClone = currentImage.cloneNode(true);
 
     imageModal.innerHTML = "";
@@ -355,6 +364,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function init() {
+    if (allImages.length === 1) {
+      currSlide = 0;
+      updateImageMeta(0);
+
+      if (openImageCounter) openImageCounter.style.display = "none";
+      if (btnNext) btnNext.style.display = "none";
+      if (btnPrev) btnPrev.style.display = "none";
+
+      return;
+    }
+
     const viewport = smallWrapper.parentElement;
     if (!viewport) return;
 

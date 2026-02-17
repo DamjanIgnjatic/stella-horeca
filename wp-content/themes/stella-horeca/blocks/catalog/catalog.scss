@@ -1,5 +1,8 @@
+// Variables
+@import "../../assets/scss/theme/variables/block-index";
+@import "../../assets/scss/theme/base/mixins";
+
 .section-catalog {
-  background-color: $black;
   padding: 9.3rem 0 11.2rem;
   text-align: center;
 
@@ -9,11 +12,8 @@
 
   p {
     padding: 0 8.6rem;
-    margin-bottom: 9.1rem;
-
     @media (max-width: $lg) {
       padding: 0;
-      margin-bottom: 2rem;
     }
   }
 
@@ -24,10 +24,12 @@
     border-radius: 6.3rem;
     background-color: $white;
     padding: 1.9rem 2.8rem 1.8rem 1.8rem;
+    margin-top: 9.1rem;
 
     @media (max-width: $lg) {
       display: block;
       padding: 2rem;
+      margin-top: 2rem;
     }
 
     div {

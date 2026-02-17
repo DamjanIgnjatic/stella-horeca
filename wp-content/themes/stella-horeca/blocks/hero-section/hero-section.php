@@ -25,7 +25,7 @@
         data-mobile-image="<?php echo $mobileBgUrl; ?>"
         <?php endif; ?>>
         <div class="container">
-            <div class="section-hero--wrapper">
+            <div class="section-hero--wrapper animated left-to-right">
                 <?php if ($title) : ?>
                     <h1><?php echo $title ?></h1>
                 <?php endif; ?>

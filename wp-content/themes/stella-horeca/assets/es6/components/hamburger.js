@@ -13,31 +13,37 @@ let _this = (module.exports = {
   hamburger: function () {
     const hamburger = document.querySelector(".hamburger");
     const socialIcons = document.querySelectorAll(".social-media-icons");
+    const openSubmenu = document.querySelector(".menu-item-has-children");
     const body = document.body;
-    
+
+    if (!hamburger) return;
 
     hamburger.addEventListener("click", () => {
-      body.classList.toggle("menu-open");
-    });
+      const isOpen = body.classList.toggle("menu-open");
 
-    
+      if (!isOpen && openSubmenu) {
+        openSubmenu.classList.remove("submenu-open");
+      }
+    });
 
     socialIcons.forEach((icon) => {
       icon.addEventListener("click", () => {
         body.classList.remove("menu-open");
+        if (openSubmenu) {
+          openSubmenu.classList.remove("submenu-open");
+        }
       });
     });
   },
 
-  submenu: function(){
-    const openSubmenu=document.querySelector(".menu-item-has-children");
+  submenu: function () {
+    const openSubmenu = document.querySelector(".menu-item-has-children");
+    if (!openSubmenu) return;
 
-    openSubmenu.addEventListener("click", () =>{
+    openSubmenu.addEventListener("click", (e) => {
+      e.stopPropagation();
       openSubmenu.classList.toggle("submenu-open");
-
-
-    })
-
+    });
   },
 
   /**
@@ -47,6 +53,4 @@ let _this = (module.exports = {
     this.hamburger();
     this.submenu();
   },
-
-
 });

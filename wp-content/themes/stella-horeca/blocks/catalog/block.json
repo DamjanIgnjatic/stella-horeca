@@ -1,0 +1,37 @@
+{
+  "name": "acf/catalog",
+  "title": "Block - Catalog section",
+  "description": "Catalog section",
+  "style": "catalog-block-style",
+  "script": "catalog-block-script",
+  "category": "design",
+  "icon": "editor-paste-text",
+  "apiVersion": 2,
+  "keywords": ["catalog"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "catalog.php",
+    "postTypes": ["products", "page"]
+  },
+  "styles": [],
+  "supports": {
+    "align": "full",
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": true,
+      "link": false
+    },
+    "alignText": false,
+    "fullHeight": false
+  },
+  "attributes": {},
+  "example": {
+    "attributes": {
+      "data": {
+        "previewImage": true
+      }
+    }
+  }
+}

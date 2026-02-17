@@ -15,7 +15,7 @@
     $title = get_field('title') ?: false;
     $form = get_field('form') ?: false;
     ?>
-    <section class="section section-contact-form block <?php echo $className; ?>"
+    <section class="section section-contact-form block animated fade-in <?php echo $className; ?>"
         <?php if ($bgUrl): ?>
         style="background-image: url('<?php echo $bgUrl; ?>');"
         data-desktop-image="<?php echo $bgUrl; ?>"
