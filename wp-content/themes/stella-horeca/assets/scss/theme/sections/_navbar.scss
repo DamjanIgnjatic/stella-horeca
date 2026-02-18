@@ -73,10 +73,36 @@
             border-bottom: 2px solid $dark-300;
           }
 
+          &.current-menu-item {
+            position: relative !important;
+
+            a {
+              @media (max-width: $lg) {
+                color: $primary;
+              }
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -3px;
+              background-color: $primary;
+              width: 100%;
+              height: 3px;
+              left: 0;
+
+              @media (max-width: $lg) {
+                display: none;
+              }
+            }
+          }
+
           &.menu-item-has-children {
             &.submenu-open {
               a {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='6 15 12 9 18 15' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                @media (max-width: $lg) {
+                  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolyline points='6 15 12 9 18 15' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                }
               }
 
               .sub-menu {
@@ -165,6 +191,19 @@
                 border-bottom: none !important;
               }
 
+              &.current-menu-item {
+                a {
+                  background-color: $primary;
+                  color: $white;
+                  border-color: $primary !important;
+                  @media (max-width: $lg) {
+                    background-color: transparent;
+                    color: $primary;
+                    border: none;
+                  }
+                }
+              }
+
               &:not(:last-child) {
                 a {
                   border-bottom: 1px solid $orange-100;
@@ -193,34 +232,6 @@
                   color: $primary;
                   background-color: transparent;
                 }
-              }
-            }
-          }
-
-          &.current-menu-item {
-            position: relative !important;
-            a {
-              background-color: $primary;
-              color: $white;
-              border-color: $primary !important;
-              @media (max-width: $lg) {
-                background-color: transparent;
-                color: $primary;
-                border: none;
-              }
-            }
-
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: -3px;
-              background-color: $primary;
-              width: 100%;
-              height: 3px;
-              left: 0;
-
-              @media (max-width: $lg) {
-                display: none;
               }
             }
           }

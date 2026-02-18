@@ -58,15 +58,16 @@ footer.footer {
   }
 
   .copyright {
-    padding: 1.6rem 0;
-    font-size: 1.4rem;
-    line-height: 2.56rem;
+    padding: 1.6rem 2rem;
     color: $white-400;
     text-align: center;
     background-color: $white-100;
     backdrop-filter: blur(12px);
 
     p {
+      font-size: 1.4rem;
+      line-height: 2.56rem;
+
       @media (max-width: $lg) {
         margin: 0;
       }
