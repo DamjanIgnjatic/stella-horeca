@@ -200,8 +200,13 @@
           &.current-menu-item {
             position: relative !important;
             a {
+              background-color: $primary;
+              color: $white;
+              border-color: $primary !important;
               @media (max-width: $lg) {
+                background-color: transparent;
                 color: $primary;
+                border: none;
               }
             }
 
