@@ -1,0 +1,27 @@
+.error-page {
+  text-align: center;
+  padding: 15rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid $dark-300;
+  background-image: url("../../images/single-hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h2 {
+    strong {
+      color: $primary;
+      text-transform: uppercase;
+    }
+  }
+
+  .horeca-btn {
+    height: 5rem;
+    justify-content: center;
+    display: flex;
+  }
+}
