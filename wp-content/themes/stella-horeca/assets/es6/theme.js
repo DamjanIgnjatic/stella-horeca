@@ -6,12 +6,6 @@ BackgroundImage.init();
 const Modal = require("./components/modal");
 Modal.init();
 
-// // Example modal call
-// document.addEventListener('DOMContentLoaded', function() {
-// 	Modal.fill('Test title', '<u>Test body text<br/>...</b>');
-// 	Modal.show();
-// });
-
 // Include vertical slider
 const Accordions = require("./components/accordions");
 

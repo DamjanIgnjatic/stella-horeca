@@ -36,6 +36,13 @@ footer.footer {
           margin-top: 3rem;
         }
       }
+
+      a {
+        transition: $transition;
+        &:hover {
+          color: $primary;
+        }
+      }
     }
 
     h2 {
@@ -61,8 +68,10 @@ footer.footer {
     padding: 1.6rem 2rem;
     color: $white-400;
     text-align: center;
-    background-color: $white-100;
+    background-color: $dark-500;
     backdrop-filter: blur(12px);
+    z-index: 6;
+    position: relative;
 
     p {
       font-size: 1.4rem;

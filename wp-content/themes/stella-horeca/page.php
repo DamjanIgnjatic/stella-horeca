@@ -9,7 +9,7 @@
 
 				echo apply_filters('block_content', $content);
 				?>
-				<?php if (is_page('rentanje-oprema')) : ?>
+				<?php if (is_page('rentanje-opreme')) : ?>
 					<?php get_template_part('template-parts/products/recommended') ?>
 				<?php endif ?>
 			<?php endwhile; ?>

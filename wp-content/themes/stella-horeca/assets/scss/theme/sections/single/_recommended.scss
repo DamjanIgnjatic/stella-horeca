@@ -80,6 +80,10 @@
       }
     }
 
+    // &:nth-child(2) {
+    //   grid-area: 1/1;
+    // }
+
     &:last-child {
       background-color: $purple-300;
       padding-left: calc((100% - 148rem) / 2);

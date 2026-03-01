@@ -1,0 +1,42 @@
+{
+    "name": "acf/hero-products",
+    "title": "Block - Hero Products section",
+    "description": "Hero Products section",
+    "style": "hero-products-block-style",
+    "script": "hero-products-block-script",
+    "category": "design",
+    "icon": "editor-paste-text",
+    "apiVersion": 2,
+    "keywords": [
+        "hero-products"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero-products.php",
+        "postTypes": [
+            "post", 
+            "page"
+        ]
+    },
+    "styles": [],
+    "supports": {
+        "align": "full",
+        "anchor": false,
+        "alignContent": false,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "alignText": false,
+        "fullHeight": false
+    },
+    "attributes": {},
+    "example": {
+        "attributes": {
+            "data": {
+                "previewImage" : true
+            }
+        }
+    }
+}

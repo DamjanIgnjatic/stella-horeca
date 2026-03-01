@@ -99,9 +99,9 @@
 
                         </div>
                         <div class="images-wrapper--open-image">
-                            <p>1/20</p>
-                            <p>Naziv slike</p>
-                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <p class="number">1/20</p>
+                            <p class="name">Naziv slike</p>
+                            <svg class="expand" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 23V14.7857H3.28571V19.7143H8.21429V23H0ZM0 8.21429V0H8.21429V3.28571H3.28571V8.21429H0ZM14.7857 23V19.7143H19.7143V14.7857H23V23H14.7857ZM19.7143 8.21429V3.28571H14.7857V0H23V8.21429H19.7143Z" fill="white" />
                             </svg>
                         </div>
@@ -135,7 +135,5 @@
             <div class="image-modal">
             </div>
         </div>
-
-        <!-- <div class="empty-section"></div> -->
     </section>
 <?php endif; ?>

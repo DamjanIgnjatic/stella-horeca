@@ -35,6 +35,8 @@
       text-align: left !important;
       height: 5.6rem !important;
       padding: 1.6rem !important;
+      background-color: $black !important;
+      border-color: #434141 !important;
     }
 
     .form_sublabel_below {
@@ -46,6 +48,7 @@
       height: 28.6rem !important;
       padding: 1.6rem !important;
       text-align: left !important;
+      background-color: $black !important;
     }
 
     .gform-footer {
@@ -64,6 +67,12 @@
       width: 100% !important;
       text-align: center !important;
       border-radius: 6rem !important;
+      background-color: $primary !important;
+
+      &:hover {
+        background-color: $white !important;
+        color: $primary;
+      }
     }
   }
 }

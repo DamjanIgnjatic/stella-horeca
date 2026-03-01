@@ -3,8 +3,12 @@ $current_id = get_the_ID();
 $args = [
     'post_type'      => "products",
     'posts_per_page' => -1,
-    'orderby'        => 'date',
-    'order'          => 'DESC'
+    'orderby'        => 'post_name__in',
+    'post_name__in'  => [
+        'stolice',
+        'stolovi',
+        'dekorativna-rasveta'
+    ],
 ];
 
 if (is_singular("products")) {

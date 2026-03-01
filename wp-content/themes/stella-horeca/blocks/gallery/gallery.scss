@@ -117,6 +117,10 @@
         svg {
           width: 100%;
           height: 100%;
+
+          @media (max-width: $lg) {
+            display: none;
+          }
         }
 
         &.arrow-prev {
@@ -206,6 +210,7 @@
           border-bottom-right-radius: 3rem;
           height: 3rem;
           padding: 0 1.4rem;
+          justify-content: center;
         }
 
         p {
@@ -215,6 +220,13 @@
           @media (max-width: $lg) {
             font-size: 1.4rem;
             line-height: 1;
+          }
+        }
+
+        .expand,
+        .number {
+          @media (max-width: $lg) {
+            display: none;
           }
         }
 

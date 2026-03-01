@@ -40,6 +40,7 @@
         height: 100%;
         left: 0;
         transform: translateX(-100%);
+        gap: 4.1rem;
       }
 
       .theme-menu-content {
@@ -150,6 +151,7 @@
           a {
             @media (max-width: $lg) {
               padding: 0 2rem;
+              font-size: 1.7rem;
             }
           }
 
@@ -179,7 +181,7 @@
               background-color: transparent;
               position: static;
               text-align: left;
-              padding-left: 2rem;
+              padding-left: 4rem;
               display: none;
               width: 100% !important;
             }
@@ -200,6 +202,14 @@
                     background-color: transparent;
                     color: $primary;
                     border: none;
+                  }
+                }
+              }
+
+              &:last-child {
+                a {
+                  @media (max-width: $lg) {
+                    padding-bottom: 0;
                   }
                 }
               }
@@ -228,6 +238,7 @@
               }
 
               @media (max-width: $lg) {
+                color: $white;
                 &:hover {
                   color: $primary;
                   background-color: transparent;
@@ -261,6 +272,10 @@
         svg {
           width: 1.85rem;
           height: 1.85rem;
+          @media (max-width: $lg) {
+            width: 2.2rem;
+            height: 2.2rem;
+          }
         }
       }
 
@@ -274,6 +289,7 @@
 
         @media (max-width: $lg) {
           max-width: 20rem;
+          text-align: center;
         }
       }
     }

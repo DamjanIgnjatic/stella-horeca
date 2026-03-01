@@ -62,7 +62,7 @@ class CustomPostTypes
                 'custom-fields',
                 'taxonomies'
             ],
-            'hierarchical' => false,
+            'hierarchical' => true,
             'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
@@ -75,6 +75,7 @@ class CustomPostTypes
             'publicly_queryable' => true,
             'capability_type' => 'post',
             'show_in_rest' => true,
+
 
             // This is where we add taxonomies to our CPT
             'taxonomies' => [

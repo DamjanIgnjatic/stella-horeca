@@ -17,7 +17,7 @@ body.stellahoreca {
   color: $white;
   font-family: $text-font;
   font-size: $font-size;
-  font-weight: $font-weight-base;
+  font-weight: 400;
   line-height: $line-height-base;
   position: relative;
 
@@ -37,6 +37,7 @@ body.stellahoreca {
 
   &.menu-open {
     overflow: hidden;
+    height: 100%;
 
     .middle-nav {
       transform: translateX(0);
