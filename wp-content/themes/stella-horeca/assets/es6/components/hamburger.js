@@ -15,11 +15,12 @@ let _this = (module.exports = {
     const socialIcons = document.querySelectorAll(".social-media-icons");
     const openSubmenu = document.querySelector(".menu-item-has-children");
     const body = document.body;
+    const html = document.documentElement;
 
     if (!hamburger) return;
 
     hamburger.addEventListener("click", () => {
-      const isOpen = body.classList.toggle("menu-open");
+      const isOpen = html.classList.toggle("menu-open");
 
       if (!isOpen && openSubmenu) {
         openSubmenu.classList.remove("submenu-open");
@@ -29,6 +30,7 @@ let _this = (module.exports = {
     socialIcons.forEach((icon) => {
       icon.addEventListener("click", () => {
         body.classList.remove("menu-open");
+        html.classList.remove("menu-open");
         if (openSubmenu) {
           openSubmenu.classList.remove("submenu-open");
         }

@@ -9,6 +9,32 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+
+  &.menu-open {
+    overflow: hidden;
+
+    .middle-nav {
+      transform: translateX(0);
+    }
+
+    .hamburger {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  &.open-image-modal {
+    overflow: hidden;
+  }
 }
 
 body.stellahoreca {
@@ -28,33 +54,6 @@ body.stellahoreca {
   &.admin-bar {
     .navigation-section {
       top: 32px;
-    }
-  }
-
-  &.open-image-modal {
-    overflow: hidden;
-  }
-
-  &.menu-open {
-    overflow: hidden;
-    height: 100%;
-
-    .middle-nav {
-      transform: translateX(0);
-    }
-
-    .hamburger {
-      span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-
-      span:nth-child(2) {
-        opacity: 0;
-      }
-
-      span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
     }
   }
 }
