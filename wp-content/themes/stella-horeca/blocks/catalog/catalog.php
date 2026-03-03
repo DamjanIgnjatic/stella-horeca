@@ -15,7 +15,7 @@
     $catalog_description = get_field("catalog_description");
     $catalog_link = get_field("catalog_link",);
     ?>
-    <section class="section section-catalog animated right-to-left">
+    <section class="section section-catalog animated left-to-right">
         <div class="container">
             <?php if ($catalog_description) : ?>
                 <?php echo $catalog_description ?>

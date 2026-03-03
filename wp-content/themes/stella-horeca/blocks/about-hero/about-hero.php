@@ -41,7 +41,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="section-about-hero--text-text animated right-to-left">
+            <div class="section-about-hero--text-text animated left-to-right">
                 <?php if ($left_description) : ?>
                     <div>
                         <?php echo $left_description ?>

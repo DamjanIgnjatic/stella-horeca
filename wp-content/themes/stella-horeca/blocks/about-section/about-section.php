@@ -17,7 +17,7 @@
     $description = get_field('description') ?: false;
 
     ?>
-    <section class="section section-about block animated right-to-left <?php echo $className; ?>">
+    <section class="section section-about block animated left-to-right <?php echo $className; ?>">
         <div class="container">
             <?php if ($tagline) : ?>
                 <span><?php echo $tagline ?></span>
