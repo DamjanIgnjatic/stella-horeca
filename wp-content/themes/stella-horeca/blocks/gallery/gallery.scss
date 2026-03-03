@@ -33,6 +33,10 @@
 
     .images-wrapper--container {
       display: block !important;
+
+      @media (max-width: $lg) {
+        display: none !important;
+      }
     }
 
     .section-gallery--title {
@@ -90,16 +94,12 @@
     img {
       width: 100%;
       display: block;
-
-      @media (max-width: $lg) {
-        width: unset !important;
-      }
     }
 
     .images-wrapper {
       position: relative;
 
-      @media (max-width: $lg) {
+      @media (max-width: 991px) {
         overflow: hidden;
         margin-right: -2rem;
       }
@@ -159,21 +159,29 @@
         border-radius: 6rem;
 
         @media (max-width: $lg) {
-          overflow: visible; // omogućava da se vidi peek sledeće slike
+          border-radius: 3rem;
+        }
+
+        @media (max-width: 991px) {
+          overflow: visible;
         }
 
         img {
           position: absolute;
           inset: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
           width: 100%;
           height: 100%;
           transition: transform 1s;
           object-fit: cover;
-          @media (max-width: $lg) {
-            border-radius: 3rem;
+
+          @media (max-width: 991px) {
+            inset: auto;
+            left: 0;
+            top: 0;
+            width: 72%;
+            aspect-ratio: 3/2;
+            height: auto;
+            border-radius: 1.6rem;
             cursor: pointer;
           }
         }
